@@ -1,0 +1,447 @@
+/* CSS Document */
+@import "_setting.scss";
+
+*{
+	box-sizing: border-box;
+	font-family: "Noto Sans JP", sans-serif;
+}
+body{
+	background: url("../images/bg.png");
+	padding: 0;
+	margin: 0;
+	background-size: clamp(10px, 4%, 25px);
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+	100% { opacity: 1;}
+}
+@keyframes move1{
+	0% { transform: translate(0); }
+	100%{ transform: translate(0, -5px); }
+}
+@keyframes hukidasi1{
+	0% { transform: rotate(0); }
+	100%{ transform: rotate(5deg); }
+}
+@keyframes hukidasi2{
+	0% { transform: rotate(0); }
+	100%{ transform: rotate(-5deg); }
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+.mb{
+	margin-bottom: clamp(30px, 5%, 100px);
+}
+.mb-0{
+	margin-bottom: 0 !important;
+}
+
+.header{
+	display: block;
+	background: #fff;
+	text-align: center;
+	img{
+		width: clamp(100px, 20%, 200px);
+		height: auto;
+	}
+}
+.firstarea, .resultarea{
+	padding: clamp(30px, 5%, 40px) 0;
+	max-width: 768px;
+	margin: 0 auto;
+	@include tb{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+.area01{
+	text-align: center;
+	margin-bottom: clamp(70px, 12%, 150px);
+	.txt1{
+		img{
+			max-width: 90%;
+		}
+	}
+	h1{
+		margin: 0 auto;
+	}
+	@include tb{
+		padding: 0 10px;
+	}
+	.illustarea{
+		display: block;
+		position: relative;
+		width: clamp(300px, 100%, 450px);
+		margin: 30px auto 0;
+		font-size: 0;
+		line-height: 0;
+		.illust{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.hukidasi1{
+			display: block;
+			width: clamp(100px, 30%, 200px);
+			position: absolute;
+			top:35px;
+			left: -30px;
+			animation: hukidasi1 0.8s ease;
+			animation-timing-function:steps(2,jump-none);
+			animation-iteration-count: 2;
+			@include tb{
+				top: 10%;
+				left: -15px;
+			}
+		}
+		.hukidasi2{
+			display: block;
+			width: clamp(100px, 30%, 190px);
+			position: absolute;
+			top: 10px;
+			right: -40px;
+			animation: hukidasi2 0.8s ease;
+			animation-timing-function:steps(2,jump-none);
+			animation-iteration-count: 2;
+			@include tb{
+				top: 3%;
+				right: -15px;
+			}
+		}
+	}
+	.btn{
+		max-width: clamp(350px, 90%, 500px);
+		margin: 0 auto;
+		cursor: pointer;
+		background: url("../images/btn_start_on.png") no-repeat;
+		background-size: 100%;
+		animation: move1 1s ease .5s infinite alternate forwards;
+		img{
+			transition: all linear 0.3s;
+		}
+		&:hover{
+			img{
+				opacity: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+.q_area{
+	position: relative;
+	padding-top: clamp(30px, 10%, 100px);
+	display: none;
+	&.show{
+		display: block;
+		//animation: fadeIn 0.9s ease-in 1s forwards;
+	}
+	&:before{
+		display: block;
+		background: url("../images/q_img.png") no-repeat;
+		background-size: 70px;
+		width: 70px;
+		height: 70px;
+		content: "";
+		position: absolute;
+		top: 70px;
+		left: 0;
+		@include tb{
+			top: 20%;
+		}
+		@include sp{
+			top: 15%;
+			background-size: 55px;
+			width: 55px;
+			height: 55px;
+		}
+	}
+	.baloon{
+		display: block;
+		background: #fff;
+		border-radius: 15px;
+		padding: 30px 20px 20px;
+		width: calc(100% - 95px);
+		margin: 0 5px 0 auto;
+		box-shadow: -1px -1px 0px 2px rgba(0, 0, 0, 1), 2px 2px 0px 3px rgba(0, 0, 0, 1);
+		position: relative;
+		@include sp{
+			width: calc(100% - 80px);
+		}
+		&._mb-l{
+			margin-bottom: clamp(60px, 10%, 150px);
+		}
+		&:before, &:after {
+			--size: var(--icon-size,1em);
+			--color: var(--icon-color,currentColor);
+			content: "";
+			inline-size: var(--size);
+			aspect-ratio: 1/.9;
+			background-color: var(--color);
+			-webkit-clip-path: polygon(0 0,50% 100%,100% 0);
+			clip-path: polygon(0 0,50% 100%,100% 0);
+			transform: rotate(90deg);
+			position: absolute;
+			color: #000;
+			inset-block-start: 30px;
+			inset-inline-end: 100%;
+			font-size: 20px;
+		}
+		&:after {
+			background: inherit;
+			-webkit-margin-end: -5px;
+			margin-inline-end: -5px;
+		}
+		.q_txt{
+			display: block;
+			border: $bk 3px solid;
+			background: $col2;
+			padding: 3px 15px;
+			position: absolute;
+			top:-15px;
+			left: 20px;
+			font-size: 16px;
+			line-height: 1.3;
+			font-weight: bold;
+			color: #fff;
+		}
+		b{
+			display: block;
+			margin-bottom: 0.7em;
+		}
+		.selectbox {
+			position: relative;
+			&:before{
+				position: absolute;
+				content: '';
+				pointer-events: none;
+			}
+			&:before{
+				position: absolute;
+				top: 10px;
+				right: 8px;
+				background: url("../images/icon1.png") no-repeat;
+				background-size: 25px;
+				width: 25px;
+				height: 27px;
+				content: '';
+			}
+			select {
+				appearance: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				background: #e4ffff;
+				//min-width: 230px;
+				width: 100%;
+				height: 2.8em;
+				padding: .4em 35px .4em .8em;
+				border: 2px solid $col1;
+				border-radius: 3px;
+				color: #333333;
+				font-size: 1em;
+				cursor: pointer;
+				font-weight: bold;
+				&:focus {
+					outline: 1px solid $col1;
+				}
+				option{
+					white-space: pre-wrap;
+				}
+			}
+		}
+		
+		//答え
+		&._asnwer{
+			display: none;
+			padding: 20px;
+			margin: 30px 23px 0 auto;
+			width: fit-content;
+			background: $col2;
+			max-width: 90%;
+			&.show{
+				display: block;
+			}
+			&:before, &:after {
+				transform: rotate(-90deg);
+				inset-inline-end: -23px;
+				inset-block-start: 25px;
+			}
+			&:after {
+				background: inherit;
+				-webkit-margin-end: 5px;
+				margin-inline-end: 5px;
+			}
+			b{
+				margin-bottom: 0;
+				color: #fff;
+			}
+		}
+	}
+	
+	//待ちエリア
+	&._waiting{
+		padding-top: 15px;
+		height: 170px;
+		display: block;
+		@include sp{
+			height: 150px;
+		}
+		&:before{
+			background: url("../images/img06.png") no-repeat;
+			background-size: 100%;
+			background-position: center bottom;
+			width: 120px;
+			height: 170px;
+			top: 0;
+			@include sp{
+				width: 100px;
+				height: 150px;
+			}
+		}
+		.baloon{
+			width: calc(100% - 140px);
+			padding: 20px;
+			@include sp{
+				width: calc(100% - 120px);
+			}
+		}
+	}
+}
+
+#step5{
+	.btn{
+		display: block;
+		max-width: clamp(350px, 90%, 500px);
+		margin: auto;
+		cursor: pointer;
+		background: url("../images/btn_result_on.png") no-repeat;
+		background-size: 100%;
+		animation: move1 1s ease .5s infinite alternate forwards;
+		img{
+			transition: all linear 0.3s;
+		}
+		&:hover{
+			img{
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.btn_back{
+	display: block;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	padding: 8px 30px;
+	border-radius: 30px;
+	cursor: pointer;
+	width: fit-content;
+	margin: clamp(40px, 8%, 80px) auto;
+}
+
+.waiting_area_wrapper{
+	display: block;
+	margin-bottom: 5%;
+	&.hide{
+		display: none;
+	}
+}
+
+.res_box{
+	display: block;
+	background: #fff;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: -1px -1px 0px 2px rgba(0, 0, 0, 1), 2px 2px 0px 3px rgba(0, 0, 0, 1);
+	@include tb{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+.searching{
+	display: block;
+	padding: clamp(30px, 5%, 60px) 0;
+	text-align: center;
+	b{
+		color: $col2;
+		animation: fadeIn 1.5s ease-in-out infinite;
+	}
+}
+
+.resultarea{
+	display: none;
+}
+
+.result_inner{
+	&.hide{
+		display: none;
+	}
+	.title{
+		width: calc(100% - 20px);
+		margin-bottom: -5px;
+	}
+	.lists{
+		.list{
+			position: relative;
+			padding: 20px 0;
+			margin-bottom: 20px;
+			border-bottom: #000 2px dotted;
+			.num{
+				display: block;
+				width: fit-content;
+				font-weight: bold;
+				background: $col2;
+				padding: 3px 15px;
+				color: #fff;
+				box-shadow: -1px -1px 0px 2px rgba(0, 0, 0, 1), 2px 2px 0px 3px rgba(0, 0, 0, 1);
+				position: absolute;
+				top: -5px;
+				left: -25px;
+				font-size: 14px;
+			}
+			a{
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				.banner{
+					width: 40%;
+					font-size: 0;
+				}
+				b{
+					width: 60%;
+					padding-left: 15px;
+					color: #000;
+				}
+				@include tb{
+					.banner, b{
+						width: 50%;
+					}
+				}
+				@include sp{
+					flex-wrap: wrap;
+					.banner{
+						width: 100%;
+						padding-top: 15px;
+					}
+					b{
+						width: 100%;
+						padding: 10px 0 0 0;
+						font-size: 13px;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+}

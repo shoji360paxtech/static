@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>資料診断</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!--↓アニメーション-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<link rel="stylesheet" href="css/style.css" media="all">
+</head>
+
+<body>
+	<header class="header"><a href="https://inden-seminar.com/documents_download_top/" target="_blank"><img src="images/logo.png" alt="まるなげ資料請求"></a></header>
+	
+	<div class="firstarea">
+		
+		<div id="step1" class="area01 mb">
+			<div class="txt1 animate__animated animate__bounceIn animate__delay-2s"><img src="images/img01.png" alt="３つの質問に答えるだけで" width="555" height="170"></div>
+			<h1 class="animate__animated animate__bounceIn animate__delay-3s"><img src="images/img02.png" alt="あなたにオススメの資料が見つかる！" width="555" height="170"></h1>
+			<div class="illustarea animate__animated animate__fadeIn">
+				<div class="illust"><img src="images/img03.png" alt=""></div>
+				<div class="hukidasi1"><img src="images/img04.png" alt=""></div>
+				<div class="hukidasi2"><img src="images/img05.png" alt=""></div>
+			</div>
+			<div class="animate__animated animate__bounceIn animate__delay-3s">
+				<div class="btn"><img src="images/btn_start.png" alt="診断スタート"></div>
+			</div>
+		</div>
+		
+		
+		<!--質問１-->
+		<div id="step2" class="q_area mb">
+			
+			<div class="baloon">
+				<div class="q_txt">質問1</div>
+				<b>あなたの職種を選択してください</b>
+				<div class="selectbox">
+					<select class="dropdown" id="2" name="職種"><option value="ダミー">選択してください</option><option value="管理的職業">管理的職業</option><option value="研究・技術の職業">研究・技術の職業</option><option value="法務・経営・文化芸術等の専門的職業">法務・経営・文化芸術等の専門的職業</option><option value="医療・看護・保健の職業">医療・看護・保健の職業</option><option value="保育・教育の職業">保育・教育の職業</option><option value="事務的職業">事務的職業</option><option value="販売・営業の職業">販売・営業の職業</option><option value="福祉・介護の職業">福祉・介護の職業</option><option value="サービスの職業">サービスの職業</option><option value="警備・保安の職業">警備・保安の職業</option><option value="農林漁業の職業">農林漁業の職業</option><option value="製造・修理・塗装・製図等の職業">製造・修理・塗装・製図等の職業</option><option value="配送・輸送・機械運転の職業">配送・輸送・機械運転の職業</option><option value="建設・土木・電気工事の職業">建設・土木・電気工事の職業</option><option value="運搬・清掃・包装・選別等の職業">運搬・清掃・包装・選別等の職業</option></select>
+				</div>
+			</div>
+			<div class="baloon _asnwer">
+				<b class="text">答えテキスト</b>
+			</div>
+		</div>
+		
+		
+		<!--質問２-->
+		<div id="step3" class="q_area mb">
+			
+			<div class="baloon">
+				<div class="q_txt">質問2</div>
+				<b>あなたの年齢を選択してください</b>
+				<div class="selectbox">
+					<select class="dropdownnarrow" id="3" name="年代"><option value="ダミー">選択してください</option><option value="10代">10代</option><option value="20代">20代</option><option value="30代">30代</option><option value="40代">40代</option><option value="50代">50代</option><option value="60代">60代</option><option value="70以上">70以上</option></select>
+				</div>
+			</div>
+			<div class="baloon _asnwer">
+				<b class="text">答えテキスト</b>
+			</div>
+			
+		</div>
+		
+		
+		<!--質問３-->
+		<div id="step4" class="q_area mb">
+			
+			<div class="baloon">
+				<div class="q_txt">質問3</div>
+				<b>関連する項目を選択してください</b>
+				<div class="selectbox">
+					<select class="dropdown" id="4" name="関心"><option value="ダミー">選択してください</option><option value="ファッション・美容">ファッション・美容</option><option value="食と嗜好品">食と嗜好品</option><option value="住まいと暮らし">住まいと暮らし</option><option value="子育て・教育">子育て・教育</option><option value="学び・自己成長">学び・自己成長</option><option value="仕事とキャリア">仕事とキャリア</option><option value="お金と資産運用">お金と資産運用</option><option value="旅行・レジャー">旅行・レジャー</option><option value="交通・移動">交通・移動</option><option value="健康・フィットネス">健康・フィットネス</option><option value="エンタメ・趣味">エンタメ・趣味</option><option value="テクノロジー・ガジェット">テクノロジー・ガジェット</option><option value="ペット・動物">ペット・動物</option></select>
+				</div>
+			</div>
+			<div class="baloon _asnwer">
+				<b class="text">答えテキスト</b>
+			</div>
+
+		</div>
+		
+		
+		<!--お疲れ様エリア-->
+		<div id="step5" class="q_area mb">
+			<div class="baloon _mb-l">
+				<b class="mb-0">お疲れ様でした。質問は以上です。<br>
+					それでは、あなたにピッタリな資料を見てみましょう。</b>
+			</div>
+			<div class="btn"><img src="images/btn_result.png" alt="オススメ資料を見る"></div>
+		</div>
+		
+		
+		
+		
+	</div>
+	
+	<div class="resultarea">
+	
+		<!--検索中表示：ここから-->
+		<div class="waiting_area_wrapper"><!-- ←「検索中」メッセージ表示 -->
+		 <!--<div class="waiting_area_wrapper hide"> ←hideクラス追加で「検索中」メッセージ非表示になります -->
+			<div class="waiting_area">
+				<div class="q_area _waiting">
+					<div class="baloon _mb-0">
+						<b class="mb-0">少々お待ちください。<br>
+							今あなたにピッタリな資料を探しています...</b>
+					</div>
+				</div>
+				<div class="res_box">
+					<div class="searching"><b>検索中・・・</b></div>
+				</div>
+			</div>
+		</div>
+		<!--検索中表示：ここまで-->
+		
+		<!--結果表示：ここから-->
+		<div class="result_inner hide"><!-- ←「結果表示」表示 -->
+		 <!--<div class="result_inner hide"> ←hideクラス追加で「結果表示」非表示になります -->
+			<div class="title animate__animated animate__fadeIn">
+				<img src="images/img07.png" alt="あなたにオススメの資料はこちら" width="823" height="298">
+			</div>
+			<div class="res_box animate__animated animate__fadeIn animate__delay-1s">
+				
+				
+				<div class="lists">
+					
+					<script>
+					var num = 0;
+					</script>
+					
+					<!--start-->
+					<div class="list">
+						<div class="num"><script>var num = num+1; document.write('資料' + num);</script></div>
+						<a href="https://inden-seminar.com/documents_download_top/" target="_blank">
+						<div class="banner">
+							<img src="https://inden-seminar.com/wp/wp-content/uploads/2025/05/250522株式会社明和-768x402.jpg" alt="">
+						</div>
+						<b>『築10年超の戸建ては要注意！』ーその屋根・外壁、本当に放置して大丈夫ですか？—保険活用で賢く直す家の守り方ー</b>
+						</a>
+					</div>
+					<!--end-->
+					
+					<!--start-->
+					<div class="list">
+						<div class="num"><script>var num = num+1; document.write('資料' + num);</script></div>
+						<a href="https://inden-seminar.com/documents_download_top/" target="_blank">
+						<div class="banner">
+							<img src="https://inden-seminar.com/wp/wp-content/uploads/2025/04/20250428-1-768x402.jpg" alt="">
+						</div>
+						<b>もう限界！個人のままで損し続けますか？今こそ法人化で負担を減らし、利益アップの道を切り拓く！</b>
+						</a>
+					</div>
+					<!--end-->
+					
+					<!--start-->
+					<div class="list">
+						<div class="num"><script>var num = num+1; document.write('資料' + num);</script></div>
+						<a href="https://inden-seminar.com/documents_download_top/" target="_blank">
+						<div class="banner">
+							<img src="https://inden-seminar.com/wp/wp-content/uploads/2025/05/250522株式会社明和-768x402.jpg" alt="">
+						</div>
+						<b>店舗の印象が変わる！ー内装と水回りを一新して、“選ばれるお店”へ。集客・売上UPに直結するリフォーム術ー</b>
+						</a>
+					</div>
+					<!--end-->
+					
+					<!--start-->
+					<div class="list">
+						<div class="num"><script>var num = num+1; document.write('資料' + num);</script></div>
+						<a href="https://inden-seminar.com/documents_download_top/" target="_blank">
+						<div class="banner">
+							<img src="https://inden-seminar.com/wp/wp-content/uploads/2025/04/20250428-1-768x402.jpg" alt="">
+						</div>
+						<b>資料タイトルテキスト資料タイトルテキスト資料タイトルテキスト</b>
+						</a>
+					</div>
+					<!--end-->
+					
+					<!--start-->
+					<div class="list">
+						<div class="num"><script>var num = num+1; document.write('資料' + num);</script></div>
+						<a href="https://inden-seminar.com/documents_download_top/" target="_blank">
+						<div class="banner">
+							<img src="https://inden-seminar.com/wp/wp-content/uploads/2025/05/250522株式会社明和-768x402.jpg" alt="">
+						</div>
+						<b>資料タイトルテキスト資料タイトルテキスト資料タイトルテキスト</b>
+						</a>
+					</div>
+					<!--end-->
+					
+				</div>
+				
+			</div>
+			
+			<div class="btn_back">前へ戻る</div>
+			
+		</div>
+		<!--結果表示：ここまで-->
+		
+	</div>
+	
+<script>
+	//wow
+	new WOW().init();
+	
+	//オープニング画面
+	$('#step1 .btn').on('click', function() {
+		$('#step2').addClass('show');
+		$("html,body").animate({scrollTop:$('#step2').offset().top}, 1000, 'swing');
+	});
+	
+	//セレクトchangeで実行
+	$('select').change(function() {
+		var text = $(this).val();
+		var num = Number($(this).attr('id'))+1;
+		var stepid = '#step' + num;
+		console.log(text);
+		console.log(stepid);
+		$(this).parents('.baloon').next().addClass('show');
+		$(this).parents('.baloon').next().children('b.text').text(text);
+		$(stepid).addClass('show');
+		$("html,body").animate({scrollTop:$(stepid).offset().top}, 1000, 'swing');
+	});
+	
+	//結果表示
+	$('#step5 .btn').on('click', function() {
+		$('.firstarea').css('display','none');
+		$('.resultarea').css('display','block');
+		$('html, body').animate({ scrollTop: 0 }, 0);
+		//↓表示確認用
+		setTimeout(function(){ $('.waiting_area_wrapper').addClass("hide"); },5000);
+		setTimeout(function(){ $('.result_inner').removeClass("hide"); },5000);
+	});
+	
+	//戻るボタン
+	$('.btn_back').on('click', function() {
+		$('.firstarea').css('display','block');
+		$('.resultarea').css('display','none');
+	});
+</script>	
+</body>
+</html>
