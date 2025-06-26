@@ -1,4 +1,5 @@
-let maluuid=localStorage.getItem('maluuid')||crypto.randomUUID()
+let maluuid=localStorage.getItem('maluuid')||crypto.randomUUID();
+localStorage.setItem('maluuid',maluuid);
 let gaswebapp='https://script.google.com/macros/s/AKfycbyykRoS2d7nRtWb5ghT2Co2ldQu6vGJ7ola5I2sr5q6WzjQGKYknxVMdMqqxe5vqOkA/exec'
 window.addEventListener('load',function (){
 let formrundiv=document.getElementById('formrun-embed')
