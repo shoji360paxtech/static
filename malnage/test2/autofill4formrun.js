@@ -8,7 +8,7 @@ fetch("https://script.googleusercontent.com/a/macros/malnage.jp/echo?user_conten
     res => {
     	console.log(res)
     	let param=''
-    	let inputtag='<select id="malaccount" style="height:39px;padding:20px;max-width:320px;width:100%;border-color:rgb(217, 217, 217)" onchange="accountchange(this)"><option value="なし">　</option>'
+    	let inputtag='<select id="malaccount" style="font-size:18px;color:black;height:39px;max-width:320px;width:100%;border-color:rgb(217, 217, 217)" onchange="accountchange(this)"><option value="なし">　</option>'
     	for (key in res){
 			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
     	}
