@@ -13,9 +13,27 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     	console.log(res)
     	let param=''
     	let inputtag=`
-     		<div style="width:100%;text-align:right"><button id="" style="margin:5px;border-radius: 18px;height:28px;width:90px;color:white;background-color:#fc7830">マイページ</button></div>
-     		<select id="malaccount" style="font-size:18px;color:black;height:39px;max-width:320px;width:100%;border-color:rgb(217, 217, 217)" onchange="accountchange(this)"><option value="なし">　</option>
-       		`
+     	<div style="position:relative;left:-15px;width:100%;text-align:right"><style>.select-fullwidth {
+	  width: calc(100% - 30px); /* 左右15pxずつ引く */
+	  margin: 0 15px;
+	  box-sizing: border-box; /* paddingやborderを含めて幅を計算 */
+	}
+	.btn_myhome {
+	    border-radius:18px;
+	    height:28px;
+	    width:90px;
+	    color:white;
+	    background-color:#fc7830;
+	    marign-right:15px;
+	}
+	.btn_myhome:hover {
+	    background-color:#e0671c:important;
+	}
+	</style>
+	<button style="" class="btn_myhome">マイページ</button></div>
+     	<select id="malaccount" style="font-size:18px;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
+       	</select>       		
+	 `
     	for (key in res){
 			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
     	}
