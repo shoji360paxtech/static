@@ -25,6 +25,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	    color:white;
 	    background-color:#fc7830;
 	    marign-right:15px;
+            font-weight: bold;
 	}
 	.btn_myhome:hover {
 	    background-color:#e0671c:important;
