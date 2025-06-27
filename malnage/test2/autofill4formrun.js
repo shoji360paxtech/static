@@ -60,7 +60,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
        	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
 	<dialog id="myDialog">
   	<iframe id="myIframe" src="about:blank" frameborder="0"></iframe>
-  	<button class="btn_myhome" onclick="closeDialog()">閉じる</button>
+  	<button style="z-index:10000" class="btn_myhome" onclick="closeDialog()">閉じる</button>
 	</dialog>
 	 `
     	for (key in res){
