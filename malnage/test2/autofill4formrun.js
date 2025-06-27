@@ -59,8 +59,10 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
      	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
        	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
 	<dialog id="myDialog">
+ 	<div style="width:100%;text-align:right;margin-right:15px;">
+  	<button class="btn_myhome" onclick="closeDialog()" style="z-index:100000">閉じる</button>
+   	</div>
   	<iframe id="myIframe" src="about:blank" frameborder="0"></iframe>
-  	<button style="z-index:10000" class="btn_myhome" onclick="closeDialog()">閉じる</button>
 	</dialog>
 	 `
     	for (key in res){
