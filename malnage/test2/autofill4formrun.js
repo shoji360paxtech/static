@@ -26,6 +26,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	    background-color:#fc7830;
 	    marign-right:15px;
             font-weight: bold;
+	    font-size:100%;
 	}
 	.btn_myhome:hover {
 	    background-color:#e0671c:important;
@@ -33,7 +34,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	</style>
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
 	<button style="" class="btn_myhome">マイページ</button></div>
-     	<select id="malaccount" style="font-size:18px;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
+     	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
        	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
 	 `
     	for (key in res){
