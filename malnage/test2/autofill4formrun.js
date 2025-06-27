@@ -24,7 +24,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	    width:90px;
 	    color:white;
 	    background-color:#fc7830;
-	    marign-right:15px;
+     	    margin-bottom:5px;
             font-weight: bold;
 	    font-size:100%;
 	}
