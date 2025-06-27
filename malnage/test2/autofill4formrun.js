@@ -13,7 +13,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     	console.log(res)
     	let param=''
     	let inputtag=`
-     		<div style="width:100%;text-align:right">${(Reflect.ownKeys(res).length.length==0)?'<button style="width:100px;">ログイン</button>':''}</div>
+     		<div style="width:100%;text-align:right"><button id="" style="width:100px;">マイページ</button></div>
      		<select id="malaccount" style="font-size:18px;color:black;height:39px;max-width:320px;width:100%;border-color:rgb(217, 217, 217)" onchange="accountchange(this)"><option value="なし">　</option>
        		`
     	for (key in res){
