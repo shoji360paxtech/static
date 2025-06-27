@@ -36,7 +36,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	<button style="" class="btn_myhome" onclick="mypageshow()">マイページ</button></div>
      	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
        	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
-	<iframe id="ifm_mypage" style="width:100%;height:80svh;display:none;position:fix;background-color:gray;" src="about:blank"></iframe>
+	<iframe id="ifm_mypage" style="top:100px;width:100%;height:80svh;display:none;position:fix;background-color:gray;" src="about:blank"></iframe>
 	 `
     	for (key in res){
 			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
