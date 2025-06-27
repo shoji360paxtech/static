@@ -37,7 +37,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	  top: 0;
 	  left: 0;
 	  width: 100%;
-	  height: 100%;
+	  height: 90svh;
 	  background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
 	  z-index: 1000; /* 他の要素より前面に表示 */
 	}
@@ -47,9 +47,9 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	}
 	
 	#myIframe {
-	  width: 90%;
-	  height: 80%;
-	  margin: 10%;
+	  width: 100%;
+	  height: 95%;
+	  margin: 0%;
 	  border: none; /* 枠線を消す */
 	}
 	</style>
@@ -59,7 +59,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
        	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
 	<dialog id="myDialog">
   	<iframe id="myIframe" src="about:blank" frameborder="0"></iframe>
-  	<button onclick="closeDialog()">閉じる</button>
+  	<button class="btn_myhome" onclick="closeDialog()">閉じる</button>
 	</dialog>
 	 `
     	for (key in res){
