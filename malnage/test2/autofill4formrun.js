@@ -31,12 +31,36 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	.btn_myhome:hover {
 	    background-color:#e0671c:important;
 	}
+ 	#myDialog {
+	  display: none; /* 初期状態では非表示 */
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+	  z-index: 1000; /* 他の要素より前面に表示 */
+	}
+	
+	#myDialog[open] {
+	  display: block;
+	}
+	
+	#myIframe {
+	  width: 90%;
+	  height: 80%;
+	  margin: 10%;
+	  border: none; /* 枠線を消す */
+	}
 	</style>
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
-	<button style="" class="btn_myhome" onclick="mypageshow()">マイページ</button></div>
+	<button style="" class="btn_myhome" onclick="openDialog()">マイページ</button></div>
      	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
        	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
-	<iframe id="ifm_mypage" style="top:100px;width:100%;height:80svh;display:none;position:fix;background-color:gray;" src="about:blank"></iframe>
+	<dialog id="myDialog">
+  	<iframe id="myIframe" src="about:blank" frameborder="0"></iframe>
+  	<button onclick="closeDialog()">閉じる</button>
+	</dialog>
 	 `
     	for (key in res){
 			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
@@ -60,6 +84,12 @@ function accountchange(ele){
 	console.log(originalurl+query)
 	formrunifm.src=originalurl+query
 }
-function mypageshow(){
-	document.getElementById("ifm_mypage").style.display='';
+function openDialog() {
+  const dialog = document.getElementById('myDialog');
+  dialog.setAttribute('open', '');
+}
+
+function closeDialog() {
+  const dialog = document.getElementById('myDialog');
+  dialog.removeAttribute('open');
 }
