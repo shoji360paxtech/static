@@ -58,7 +58,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
 	<button style="" class="btn_myhome" onclick="openDialog()">マイページ</button></div>
      	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
-       	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
+       	<option value="" disabled selected style="display:none;">マイページにログインしてください</option>##inputtag##</select>       		
 	<dialog id="myDialog">
  	<div style="width:100%;text-align:right;margin-right:15px;">
   	<button class="btn_myhome" onclick="closeDialog()" style="z-index:100000">閉じる</button>
@@ -66,10 +66,11 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
   	<iframe id="myIframe" src="about:blank" frameborder="0"></iframe>
 	</dialog>
 	 `
+	let options=''
     	for (key in res){
-			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
+			options=`${options}<option value="${res[key]}">${key}</option>`
     	}
-    	inputtag=`${inputtag}</select>`
+    	inputtag=inputtag.replace('##inputtag##',options)
 		console.log(inputtag)
 		document.getElementById('malaccountdiv').innerHTML=inputtag;
     }
