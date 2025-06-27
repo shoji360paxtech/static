@@ -76,6 +76,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	if(Object.keys(res).length>0){
 		document.getElementById('malaccount').selectedIndex=1;
     	}
+    }
     )
     .catch(error => console.error("Error:", error));
 })
