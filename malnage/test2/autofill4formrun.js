@@ -5,7 +5,7 @@ window.addEventListener('load',function (){
 let formrundiv=document.getElementById('formrun-embed')
 let formid=formrundiv.getAttribute('data-formrun-form')
 let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
-formrundiv.insertAdjacentHTML('beforebegin',`<div style="font-size:13px;width:100%;margin-bottom:10px;"><a href="https://inden-seminar.com/doc_mypage/" target="_new">マイページ</a>に情報を登録すると、メールアドレス選択で基本情報が自動で入力されます。</div><div id="malaccountdiv" style="width:100%;padding:auto;text-align:center"></div>`)
+formrundiv.insertAdjacentHTML('beforebegin',`<div style="min-height:60px;font-size:13px;width:100%;margin-bottom:10px;"><a href="https://inden-seminar.com/doc_mypage/" target="_new">マイページ</a>に情報を登録すると、メールアドレス選択で基本情報が自動で入力されます。</div><div id="malaccountdiv" style="width:100%;padding:auto;text-align:center"></div>`)
 fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     .then(response => response.json())
     .then(
