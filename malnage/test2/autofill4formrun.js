@@ -85,6 +85,7 @@ function accountchange(ele){
 	formrunifm.src=originalurl+query
 }
 function openDialog() {
+  document.getElementById('myIframe').src='https://script.google.com/macros/s/AKfycbxd6tVV_0Va1Pag9cu8XZak6l5PeIJT7B61t401vY_ON1-UBXflkxXN8KFCSPWW2xg_zg/exec?action=mypage';
   const dialog = document.getElementById('myDialog');
   dialog.setAttribute('open', '');
 }
