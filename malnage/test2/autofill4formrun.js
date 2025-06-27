@@ -1,6 +1,6 @@
 let maluuid=localStorage.getItem('maluuid')||crypto.randomUUID();
 localStorage.setItem('maluuid',maluuid);
-let gaswebapp='https://script.google.com/macros/s/AKfycbyykRoS2d7nRtWb5ghT2Co2ldQu6vGJ7ola5I2sr5q6WzjQGKYknxVMdMqqxe5vqOkA/exec'
+let gaswebapp='https://script.google.com/macros/s/AKfycbxd6tVV_0Va1Pag9cu8XZak6l5PeIJT7B61t401vY_ON1-UBXflkxXN8KFCSPWW2xg_zg/exec'
 window.addEventListener('load',function (){
 let formrundiv=document.getElementById('formrun-embed')
 let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
