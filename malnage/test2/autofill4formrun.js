@@ -33,7 +33,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
 	<button style="" class="btn_myhome">マイページ</button></div>
      	<select id="malaccount" style="font-size:18px;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
-       	</select>       		
+       	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
 	 `
     	for (key in res){
 			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
