@@ -38,7 +38,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	  left: 0;
 	  width: 100%;
 	  height: 90svh;
-	  background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+	  background-color: #cccccc; /* 半透明の背景 */
 	  z-index: 1000; /* 他の要素より前面に表示 */
 	}
 	
@@ -51,6 +51,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	  height: 95%;
 	  margin: 0%;
 	  border: none; /* 枠線を消す */
+   	  background-color:white;
 	}
 	</style>
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
