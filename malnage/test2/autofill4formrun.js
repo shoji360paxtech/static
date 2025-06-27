@@ -35,7 +35,8 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
 	<button style="" class="btn_myhome">マイページ</button></div>
      	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
-       	<option value="" disabled selected style="display:none;">マイページにログインしてください</option></select>       		
+       	<option value="" disabled selected style="display:none;" onclick="mypageshow()">マイページにログインしてください</option></select>       		
+	<iframe id="ifm_mypage" style="width:100%;height:80svh;display:none;position:fix;background-color:gray;" src="about:blank"></iframe>
 	 `
     	for (key in res){
 			inputtag=`${inputtag}<option value="${res[key]}">${key}</option>`
@@ -58,4 +59,7 @@ function accountchange(ele){
 	if(location.search.indexOf('?')>-1) {query='&'+value} else {query='?'+value}
 	console.log(originalurl+query)
 	formrunifm.src=originalurl+query
+}
+function mypageshow(){
+	document.getElementById("ifm_mypage").style.display='';
 }
