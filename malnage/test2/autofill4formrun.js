@@ -73,7 +73,9 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     	inputtag=inputtag.replace('##inputtag##',options)
 		console.log(inputtag)
 		document.getElementById('malaccountdiv').innerHTML=inputtag;
-    }
+	if(Object.keys(res).length>0){
+		document.getElementById('malaccount').selectedIndex=1;
+    	}
     )
     .catch(error => console.error("Error:", error));
 })
