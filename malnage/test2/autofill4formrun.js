@@ -75,7 +75,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 		document.getElementById('malaccountdiv').innerHTML=inputtag;
 	if(Object.keys(res).length>0){
 		document.getElementById('malaccount').selectedIndex=1;
-		document.getElementById('malaccount').dispatchEvent(document.getElementById('malaccount'));
+		accountchange(document.getElementById('malaccount'))
     	}
     }
     )
