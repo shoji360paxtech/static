@@ -1,4 +1,3 @@
-
 let maluuid=localStorage.getItem('maluuid')||crypto.randomUUID();
 localStorage.setItem('maluuid',maluuid);
 let gaswebapp='https://script.google.com/macros/s/AKfycbxd6tVV_0Va1Pag9cu8XZak6l5PeIJT7B61t401vY_ON1-UBXflkxXN8KFCSPWW2xg_zg/exec'
@@ -8,6 +7,9 @@ let formid=formrundiv.getAttribute('data-formrun-form')
 let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
 formrundiv.insertAdjacentHTML('beforebegin',`<div style="font-size:100%;width:100%;margin-bottom:10px;">マイページに情報を登録すると、メールアドレス選択で基本情報が自動で入力されます。</div>
 <div id="malaccountdiv" style="min-height:80px;display:block;width:100%;padding:auto;text-align:center"></div>`)
+syncFormrun()
+})
+
 function syncFormrun(){
 fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     .then(response => response.json())
@@ -82,8 +84,9 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     }
     )
     .catch(error => console.error("Error:", error));
-})
 }
+
+
 syncFormrun()
 
 function accountchange(ele){
