@@ -106,5 +106,5 @@ function openDialog() {
 function closeDialog() {
   const dialog = document.getElementById('myDialog');
   dialog.removeAttribute('open');
-  syncFormrun()
+  syncFormrun();
 }
