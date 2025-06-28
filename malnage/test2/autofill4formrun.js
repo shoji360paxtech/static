@@ -86,9 +86,6 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     .catch(error => console.error("Error:", error));
 }
 
-
-syncFormrun()
-
 function accountchange(ele){
 	let formrundiv=document.getElementById('formrun-embed')
 	let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
