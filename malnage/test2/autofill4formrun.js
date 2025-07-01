@@ -60,7 +60,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
    	  background-color: background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */;
 	}
 	</style>
-	<div style="position:relative;top:-10px;left:-15px;width:100%;text-align:right">
+	<div style="position:relative;left:-15px;width:100%;text-align:right">
 	<button style="" class="btn_myhome" onclick="openDialog()">情報更新</button></div>
      	<select id="malaccount" disabled style="max-width:620px;font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
 
