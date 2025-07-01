@@ -10,7 +10,7 @@ let formrundiv=document.getElementById('formrun-embed')
 let formid=formrundiv.getAttribute('data-formrun-form')
 let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
 formrundiv.insertAdjacentHTML('beforebegin',`<div style="font-size:100%;width:100%;margin-bottom:10px;">メールアドレスが表示されていれば基本情報が自動で入力されます。「情報更新」で最新データに更新できます。</div>
-<div id="malaccountdiv" style="min-height:80px;display:block;width:100%;padding:auto;text-align:center"></div>`)
+<div id="malaccountdiv" style="display:none;min-height:80px;display:block;width:100%;padding:auto;text-align:center"></div>`)
 
 fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
     .then(response => response.json())
