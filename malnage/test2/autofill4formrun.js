@@ -9,7 +9,7 @@ function syncFormrun(){
 let formrundiv=document.getElementById('formrun-embed')
 let formid=formrundiv.getAttribute('data-formrun-form')
 let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
-formrundiv.insertAdjacentHTML('beforebegin',`<div style="font-size:100%;width:100%;margin-bottom:10px;">メールアドレス選択で基本情報が自動で入力されます。「情報更新」で最新データを取得します。</div>
+formrundiv.insertAdjacentHTML('beforebegin',`<div style="font-size:100%;width:100%;margin-bottom:10px;">メールアドレスが表示されていれば基本情報が自動で入力されます。「情報更新」で最新データを取得します。</div>
 <div id="malaccountdiv" style="min-height:80px;display:block;width:100%;padding:auto;text-align:center"></div>`)
 
 fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
@@ -62,7 +62,7 @@ fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
 	</style>
 	<div style="position:relative;left:-15px;width:100%;text-align:right">
 	<button style="" class="btn_myhome" onclick="openDialog()">情報更新</button></div>
-     	<select id="malaccount" style="font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
+     	<select id="malaccount" disabled style="max-width:620px;font-size:100%;color:black;height:39px;border-color:rgb(217, 217, 217)" onchange="accountchange(this)" class="select-fullwidth"></option>
 
        	<option value="" disabled selected style="display:none;">情報更新ボタンで最新の情報を取得</option>##inputtag##</select>       		
 	<dialog id="myDialog">
