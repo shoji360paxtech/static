@@ -1,7 +1,6 @@
 let maluuid=localStorage.getItem('maluuid')||crypto.randomUUID();
 localStorage.setItem('maluuid',maluuid);
 let gaswebapp='https://script.google.com/macros/s/AKfycbx-Ik2gLW_fuDcfqdZrmJ4H3v6910MCgYgDkx-1taJrGXsTBvkRJWvqSBCWh7DyycZ_Mg/exec'
-document.getElementsByClassName('_mypage')[0].firstChild.href='https://inden-seminar.com/%E3%83%9E%E3%82%A4%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%86%E3%82%B9%E3%83%88/'
 window.addEventListener('load',function (){
 syncFormrun()
 })
