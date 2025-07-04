@@ -12,7 +12,7 @@ let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
 formrundiv.insertAdjacentHTML('beforebegin',`<div style="display:none;font-size:100%;width:100%;margin-bottom:10px;">メールアドレスが表示されていれば基本情報が自動で入力されます。「情報更新」で最新データに更新できます。</div>
 <div id="malaccountdiv" style="min-height:80px;display:none;width:100%;padding:auto;text-align:center"></div>`)
 
-fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid)
+fetch(gaswebapp+'?action=getinfo&maluuid='+maluuid+'&formid='+formid + '&'+location.search().replace(/^[?]/,''))
     .then(response => response.json())
     .then(
     res => {
@@ -93,9 +93,8 @@ function accountchange(ele){
 	let formrunifm= formrundiv.getElementsByTagName('iframe')[0]
 	let value=ele.value
 	if(ele.value=='なし') value='' 
-	let query=''
 	let originalurl= 'https://form.run/embed/'+formrundiv.getAttribute('data-formrun-form').replace(/^([^?]*)?/,'$1')
-	if(location.search.indexOf('?')>-1) {query='&'+value} else {query='?'+value}
+	let query='?'+value
 	console.log(originalurl+query)
 	formrunifm.src=originalurl+query
 }
