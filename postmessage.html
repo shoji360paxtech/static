@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>親ページ</title>
+</head>
+<body>
+  <iframe id="gasFrame" src="https://script.google.com/macros/s/AKfycbxhr5QArsD0hkrARqKpU7IrcZy1UlHy5tAivOTj3uOMTmxFYSdKS-l308SjP_FP9_Bs/exec" width="100%" height="400"></iframe>
+
+  <button onclick="sendMessage()">iframeに送信</button>
+
+  <script>
+    // iframeにメッセージ送信
+    function sendMessage() {
+      const iframe = document.getElementById("gasFrame");
+      iframe.contentWindow.postMessage("親ページからのメッセージ", "*"); // 初期は "*" でテスト
+    }
+
+    // iframeからのメッセージ受信
+    window.addEventListener("message", (event) => {
+      console.log("iframeから受信:", event.data);
+    });
+  </script>
+</body>
+</html>
