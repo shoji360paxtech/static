@@ -35,6 +35,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="./マイページ _ まるなげ -ビジネスを加速する無料セミナーが満載_files/js(4)"></script>
 <script>
+    // iframeからのメッセージ受信
+    window.addEventListener("message", (event) => {
+      console.log("iframeから受信:", event.data);
+    });
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}
  gtag('js', new Date());
