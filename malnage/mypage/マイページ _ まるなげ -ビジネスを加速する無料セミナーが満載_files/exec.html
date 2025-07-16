@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!-- saved from url=(0186)https://script.google.com/a/macros/malnage.jp/s/AKfycbx-Ik2gLW_fuDcfqdZrmJ4H3v6910MCgYgDkx-1taJrGXsTBvkRJWvqSBCWh7DyycZ_Mg/exec?action=mypage&maluuid=d16702db-587e-441b-a817-240fb92841b4 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="chromevox" content-script="no">
+<title>まるなげ資料請求 マイページ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./icon" nonce=""><link rel="stylesheet" href="./698178915-mae_html_css_ltr.css">
+<script type="text/javascript" src="./2159191688-warden_bin_i18n_warden__ja.js" nonce=""></script>
+</head>
+<body>
+<iframe id="sandboxFrame" title="まるなげ資料請求 マイページ" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" src="./userCodeAppPanel.html">
+</iframe>
+<script nonce="">
+(function() {
+var el = document.getElementById('sandboxFrame');
+el.onload = function() {
+goog.script.init("\x7b\x22functionNames\x22:\x5b\x22doGetTest\x22,\x22clearUUID\x22,\x22doGet\x22,\x22sendToken\x22,\x22getMyPageTest\x22,\x22getMyPage\x22,\x22logoff\x22,\x22getTagTest\x22,\x22getTag\x22,\x22HistoryUpdate\x22,\x22HistoryUpdateLast500\x22,\x22getTemplateTest\x22,\x22getTemplate\x22,\x22getTemplate_old\x22,\x22changePasswordGAS\x22,\x22tohash\x22,\x22refresh\x22,\x22getCandidates\x22,\x22test1\x22,\x22parseContactInfo\x22,\x22gasMail2GenAuth\x22,\x22checkAuth2GAS\x22,\x22getCache\x22,\x22getKintoneRecords\x22,\x22encodeQuery\x22,\x22fillImageURL\x22,\x22getImageURL\x22,\x22updatedata\x22,\x22classifyTitles\x22,\x22DocumentListUpdate\x22,\x22getSummary\x22,\x22callChatGPT\x22\x5d,\x22sandboxMode\x22:\x22IFRAME_SANDBOX\x22,\x22callbackTimeout\x22:1830000,\x22deploymentId\x22:\x22AKfycbx-Ik2gLW_fuDcfqdZrmJ4H3v6910MCgYgDkx-1taJrGXsTBvkRJWvqSBCWh7DyycZ_Mg\x22,\x22eei\x22:\x22\x22,\x22sandboxHost\x22:\x22https:\/\/n-3f7zxt3vlv644hzw34b6pa6ewuz7mjl4knm7tgi-0lu-script.googleusercontent.com\x22,\x22clientSideProperties\x22:\x7b\x22google.script.sandbox.mode\x22:\x22IFRAME_SANDBOX\x22,\x22google.script.host.origin\x22:\x22https:\/\/docs.google.com\x22\x7d,\x22actionPrefix\x22:\x22\/a\/malnage.jp\/macros\/s\/AKfycbx-Ik2gLW_fuDcfqdZrmJ4H3v6910MCgYgDkx-1taJrGXsTBvkRJWvqSBCWh7DyycZ_Mg\x22,\x22userHtml\x22:\x22\x3c!DOCTYPE html\x3e\\n\x3chtml lang\x3d\\\x22ja\\\x22\x3e\\n\\n\x3chead\x3e\\n  \x3cmeta charset\x3d\\\x22UTF-8\\\x22\x3e\\n  \x3cmeta name\x3d\\\x22viewport\\\x22 content\x3d\\\x22width\x3ddevice-width, initial-scale\x3d1.0\\\x22\x3e\\n  \x3ctitle\x3eマイページ\x3c\\\/title\x3e\\n  \x3cstyle\x3e\\n    body \x7b\\n      font-family: \x27Arial\x27, sans-serif;\\n      text-align: center;\\n      font-size:100%;\\n      margin:0px;\\n      background-color: #e8f2fa;\\n      width:100%;\\n      height:100svh;\\n       \\n    \x7d\\n.table-container \x7b\\n      \\n      width:100%;\\n      margin: 0 auto;\\n      overflow-y: auto;\\n      height: 100%;\\n    \x7d\\n\\n    \\n    table \x7b\\n      width: 100%;\\n      border-collapse: collapse;\\n      border-spacing: 0;\\n    \x7d\\n    thead \x7b\\n      position: sticky;\\n      top: 0;\\n      background-color: #e8f2fa;\\n      z-index: 1;\\n      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2);\\n    \x7d\\n    th, td \x7b\\n      \\n      padding: 5px;\\n      text-align: left;\\n      border-bottom: 1px solid #ddd;\\n    \x7d\\n\\n    th \x7b\\n      font-weight: bold;\\n      color: black;\\n    \x7d\\n    \\n    img \x7b\\n      max-height:100px;\\n      max-width: 125px;\\n      object-fit: cover;\\n    \x7d\\n    dialog \x7b\\n      width: 95%;\\n      padding: 10px;\\n      border-radius: 15px;\\n      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);\\n      border: none;\\n      background-color: #ffefd5;\\n       \\n      text-align: center;\\n      position: relative;\\n      top: -80px;\\n    \x7d\\n\\n    .h2 \x7b\\n      color: black;\\n       \\n      font-size: 120%;\\n      margin-top:0px;\\n    \x7d\\n\\n    .form-group \x7b\\n      margin-bottom: 5px;\\n      text-align:left;\\n    \x7d\\n\\n    label \x7b\\n      color: black;\\n      font-size: 80%;\\n      margin:0px;\\n       \\n    \x7d\\n\\n    input \x7b\\n      width: 95%;\\n      padding: 8px;\\n      margin-top: 5px;\\n      border: 2px solid #b29255;\\n       \\n      border-radius: 10px;\\n      background-color: #fffaf0;\\n       \\n      font-size:100%;\\n    \x7d\\n\\n    button,button:active \x7b\\n      padding: 8px 15px;\\n      margin-top: 10px;\\n      border: none;\\n      border-radius: 10px;\\n      background-color: #8c6c34;      \\n       \\n      color: white;\\n      font-weight: bold;\\n      cursor: pointer;\\n      font-size:90%;\\n    \x7d\\n\\n    .close-btn \x7b\\n      background-color: #ffe4b5;\\n       \\n      padding: 5px 10px;\\n      position: absolute;\\n      right: 15px;\\n      top: 15px;\\n      font-size: 100%;\\n    \x7d\\n\\n    .action \x7b\\n      width: 200px;\\n      margin-bottom: 5px;\\n    \x7d\\n\\n    .action:disabled \x7b\\n      opacity: 50%;\\n    \x7d\\n    .logoff-container \x7b\\n      position: sticky;\\n      top: 0;\\n      right: 0;\\n      background-color: #f8f9fa;\\n      z-index: 2;\\n      text-align: right;\\n      padding: 0px;\\n      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2);\\n    \x7d\\n    .logoff-btn, .auth_Button \x7b\\n      width:100px;\\n      padding: 5px 10px;\\n      background-color: #fc7830;\\n      color: white;\\n      border: none;\\n      border-radius: 5px;\\n      cursor: pointer;\\n      margin-left:5px;\\n      margin-right:0px;\\n      margin-bottom:5px;\\n      font-size:100%;\\n\\n    \x7d\\n\\n         .custom-form \x7b\\n      width:80%;\\n      max-width:500px;\\n      margin:auto;\\n      text-align:left;\\n    \x7d\\n\\n    .custom-form .form-group \x7b\\n      display: block;\\n      align-items: center;\\n      margin-bottom: 0em;\\n    \x7d\\n\\n    .custom-form .form-group label \x7b\\n    \x7d\\n\\n    .custom-form .form-group input \x7b\\n      flex: 1;\\n      padding: 0.5em;\\n      font-size: 100%;\\n      box-sizing: border-box;\\n    \x7d\\n    #txt_email1:read-only \x7b\\n      background-color:#cccccc;\\n    \x7d\\n    #txt_email1 \x7b\\n      width:100%;\\n    \x7d\\n    #txt_email2 \x7b\\n      width:100%;\\n    \x7d\\n\\n    #auth_Button2_1:disabled, #auth_Button2:disabled, #btn_passwordChange:disabled \x7b\\n      background-color:gray;\\n    \x7d\\n    #contents \x7b\\n      display:block;\\n      height:250px;\\n    \x7d\\n    li \x7b\\n      text-indent: -1em;\\n      padding-left: 1em;\\n      font-size:90%;\\n      font-weight:400;\\n    \x7d\\n    #message \x7b\\n      font-size:90%;\\n      text-align:left;\\n      height:7em;\\n    \x7d\\n  \x3c\\\/style\x3e\\n  \x3cscript\x3e\\n    let ele_email\x3dnull;\\n      let ele_authCode\x3dnull\\n\\n      let btn_email\x3dnull\\n      let btn_authCode\x3dnull;\\n      let initparam\x3d\x5b\x5d;\\n      let saveparam\x3dnull;\\n      let autostart\x3dnull\\n      window.onload\x3d(e)\x3d\x3e\x7b\\n        ele_email\x3ddocument.getElementById(\x27email\x27)\\n        ele_authCode\x3ddocument.getElementById(\x27authCode\x27)\\n        btn_email\x3ddocument.getElementById(\x27email_button\x27)\\n        btn_authCode\x3ddocument.getElementById(\x27auth_Button\x27)\\n\\n        ele_email.addEventListener(\x27input\x27,(e)\x3d\x3e\x7bvalidity_check()\x7d)\\n        ele_authCode.addEventListener(\x27input\x27,(e)\x3d\x3e\x7bvalidity_check()\x7d)\\n        saveparam \x3d localStorage.getItem(\x27loginsave\x27) || \x27false\x27;\\n        autostart \x3d localStorage.getItem(\x27autostart\x27) || \x27false\x27;\\n        document.getElementById(\x27autostart\x27).checked\x3d(saveparam!\x3d\x27false\x27)\\n        document.getElementById(\x27check\x27).checked\x3d(saveparam!\x3d\x27false\x27)\\n        if(saveparam\x3d\x3d\x27true\x27)\x7b\\n          initparam \x3d JSON.parse(localStorage.getItem(\x27login\x27)||\x27\x5b\\\x22\\\x22,\\\x22\\\x22\x5d\x27)\\n        \x7d\\n        ele_email.value\x3dinitparam\x5b0\x5d||\x27\x27\\n        ele_authCode.value\x3dinitparam\x5b1\x5d||\x27\x27\\n        validity_check()\\n        if(autostart\x3d\x3d\x27true\x27) \x7b\\n          login()\\n        \x7d else \x7b\\n          showDialog()\\n        \x7d\\n        \\n        btn_email.addEventListener(\x27click\x27,(e)\x3d\x3e\x7b\\n          console.log(ele_email)\\n          ele_email.disabled\x3dtrue;\\n          \\n          google.script.run.withSuccessHandler(ret\x3d\x3e\x7b\\n              ele_email.disabled\x3dfalse;\\n              document.body.style.opacity\x3d1;\\n              document.getElementById(\x27message\x27).innerHTML\x3d\x27メールアドレス宛に、仮パスワードを送信しました。\x27\\n              if(\x27false\x27\x3d\x3d\x27true\x27) \x7b\\n          document.getElementById(\x27message\x27).innerHTML\\n            \x3d`(テストモード)仮パスワードは、test@malnage.com に送信されます。コードは常に \\\x22TESTCODE\\\x22 です。`\\n          ele_authCode.value\x3d\x27TESTCODE\x27\\n          validity_check()\\n\\n        \x7d\\n\\n          \\n          \\n          \x7d).sendToken(ele_email.value,\x27d16702db-587e-441b-a817-240fb92841b4\x27)\\n        \x7d)\\n\\n        btn_authCode.addEventListener(\x27click\x27,(e)\x3d\x3e\x7b\\n          login()\\n        \x7d)\\n\\n      \x7d\\n      function login()\x7b\\n          console.log(\x27LOGIN\x27)\\n          let email\x3dele_email.value\\n          let authCode\x3dele_authCode.value\\n          document.body.style.cursor \x3d\x27wait\x27;\\n          document.body.inert\x3dtrue\\n          document.body.opacity\x3d.5;\\n          document.getElementById(\x27message\x27).innerHTML\x3d\x27しばらくお待ちください・・・\x27\\n          document.getElementById(\x27contents\x27).innerHTML\x3d\x27\x3cdiv style\x3d\\\x22width:100%;text-align:center\\\x22\x3e\x3cbr\x3e\x3cbr\x3e\x3cbr\x3e\x3cbr\x3eしばらくお待ちください・・・\x3c\\\/div\x3e\x27\\n  \\n          google.script.run.withSuccessHandler((ret0\x3d\x3e\x7b\\n            document.body.inert\x3dfalse\\n            document.body.opacity\x3d.1;\\n\\n            document.body.style.cursor \x3d\x27default\x27;\\n            console.log(ret0)\\n              let ret\x3dret0\x5b0\x5d\\n                document.getElementById(\x27auth_Button2_1\x27).disabled\x3dtrue;\\n              document.getElementById(\x27txt_email2\x27).value\x3dret0\x5b1\x5d || \x27\x27;\\n              if((ret0\x5b1\x5d || \x27\x27)\x3d\x3d\x27\x27)\x7b\\n                localStorage.setItem(\x27downloadtool\x27,JSON.stringify(\x5bemail,true\x5d))\\n              \x7d else \x7b\\n                localStorage.setItem(\x27downloadtool\x27,JSON.stringify(\x5bemail+\\\x22,\\\x22+(ret0\x5b1\x5d || \x27\x27),true\x5d))                \\n              \x7d\\n              if(ret.indexOf(\x27ERROR\x27)\x3d\x3d-1)\x7b\\n \\n                if(\x27マイページ\x27\x3d\x3d\x27マイページ\x27)\x7b\\n                  document.getElementById(\x27contents\x27).innerHTML\x3dret;\\n                \x7d else \x7b\\n                  document.getElementById(\x27contents\x27).innerHTML\x3d\x27\x3cdiv style\x3d\\\x22width:90%;text-align:left\\\x22\x3e情報を取得しました。閉じるボタンをクリックして資料申請を継続してください。\x3cBR\x3e連携を解除する場合は、ログオフしてください。\x3c\\\/div\x3e\x3cbutton class\x3d\\\x22logoff-btn\\\x22 onclick\x3d\\\x22localStorage.setItem(\\\\\x27autostart\\\\\x27,\\\\\x27false\\\\\x27);showDialog()\\\x22\x7d\x3eログオフ\x3c\\\/button\x3e\x27\\n                \x7d \\n                document.body.style.opacity\x3d1;\\n                closeDialog(false)\\n                console.log(document.getElementById(\x27autostart\x27).checked)\\n                if(document.getElementById(\x27check\x27).checked)\x7b\\n                  localStorage.setItem(\x27login\x27,JSON.stringify(\x5bemail,authCode\x5d))\\n                  localStorage.setItem(\x27autostart\x27,document.getElementById(\x27autostart\x27).checked)\\n                \x7d else \x7b\\n                  localStorage.removeItem(\x27login\x27)\\n                  localStorage.removeItem(\x27loginsave\x27)\\n                  localStorage.removeItem(\x27autostart\x27)\\n                  localStorage.removeItem(\x27downloadtool\x27)\\n                \x7d\\n                document.getElementById(\x27txt_email1\x27).value\x3dele_email.value;\\n\\n\\n\\n\\n              \x7d else \x7b\\n                if (!dialog.open) \x7b\\n                  document.getElementById(\x27contents\x27).innerHTML\x3dret \\n                  showDialog()\\n                \x7d\\n                if(ele_email.value\x3d\x3d\x27\x27)\x7b\\n                  document.getElementById(\x27message\x27).innerHTML\x3d\x27メールアドレスとパスワードを入力してログインしてください。\x3cbr\x3e\x3cbr\x3e初回ログインやパスワードリセット時は、メールアドレスを入力し、「仮パスワード発行」をクリックしてください\x27\\n                \x7d else \x7b\\n                  document.getElementById(\x27message\x27).innerHTML\x3d\x27メールアドレスかパスワードが正しくありません。\x27\\n                \x7d\\n              \x7d\x7d\\n          )).getMyPage(ele_email.value,ele_authCode.value,\x27d16702db-587e-441b-a817-240fb92841b4\x27)\\n      \x7d\\n      function validity_check()\x7b\\n        \\n        if(\x27false\x27\x3d\x3d\x27true\x27) \x7b\\n          document.getElementById(\x27message\x27).innerHTML\\n            \x3d`(テストモード)認証コードは、test@malnage.com に送信されます。コードは常に \\\x22TESTCODE\\\x22 です。`\\n        \x7d\\n\\n        if(ele_email.checkValidity())\x7b\\n          ele_authCode.disabled\x3dfalse;\\n          btn_authCode.disabled\x3dfalse\\n          btn_email.disabled\x3dfalse;\\n        \x7d else \x7b\\n          ele_authCode.disabled\x3dtrue;\\n          btn_authCode.disabled\x3dtrue;\\n          btn_email.disabled\x3dtrue;\\n          console.log(ele_authCode.value)\\n        \x7d\\n        if(ele_authCode.checkValidity() \x26\x26 !ele_authCode.disabled)\x7b\\n          btn_authCode.disabled\x3dfalse;\\n          \x7d else \x7b\\n          btn_authCode.disabled\x3dtrue;\\n        \x7d\\n      \x7d\\n\\n      function auth_Mail2(email)\x7b\\n        google.script.run.withSuccessHandler(ret\x3d\x3e\x7b\\n          document.getElementById(\x27message2\x27).innerHTML\x3ddocument.getElementById(\x27txt_email2\x27).value+\x27 宛に認証コードが送信されました。認証コードをリクエストしたページに認証コードを入力し、「認証」をクリックしてください。\x27\\n\\n          document.getElementById(\x27authDialog4Mail2\x27).showModal()\\n        \x7d).gasMail2GenAuth(document.getElementById(\x27txt_email2\x27).value)\\n      \x7d\\n\\n      function checkAuth2()\x7b\\n        document.getElementById(\x27message2_1\x27).innerHTML\x3d\x27しばらくお待ちください・・・\x27\\n        google.script.run.withSuccessHandler(ret\x3d\x3e\x7b\\n          if(ret)\x7b\\n            document.getElementById(\x27message2_1\x27).innerHTML\x3d\x27登録されました。\x27\\n            window.setTimeout(function()\x7bdocument.getElementById(\x27authDialog4Mail2\x27).close()\x7d,1000)\\n            document.getElementById(\x27auth_Button2_1\x27).disabled\x3dtrue;\\n          \x7d else \x7b\\n            document.getElementById(\x27message2_1\x27).innerHTML\x3d\x27認証コードが異なります。\x27\\n          \x7d\\n        \x7d).checkAuth2GAS(document.getElementById(\x27txt_email2\x27).value,document.getElementById(\x27authcode2\x27).value,document.getElementById(\x27txt_email1\x27).value)\\n      \x7d\\n\\n      function passwordChange()\x7b\\n        google.script.run.withSuccessHandler(ret\x3d\x3e\x7b\\n          if(ret)\x7b\\n            document.getElementById(\x27message2_1\x27).innerHTML\x3d\x27登録されました。\x27\\n            window.setTimeout(function()\x7bdocument.getElementById(\x27passdialog\x27).close()\x7d,1000)\\n          \x7d else \x7b\\n            document.getElementById(\x27message2_1\x27).innerHTML\x3d\x27認証コードが異なります。\x27\\n          \x7d\\n        \x7d).passChaangeGAS(document.getElementById(\x27txt_email2\x27).value,document.getElementById(\x27authcode2\x27).value,document.getElementById(\x27txt_email1\x27).value)\\n      \x7d\\n      \\n  \x3c\\\/script\x3e\\n\x3c\\\/head\x3e\\n\\n\x3cbody\x3e\\n\\n\x3cdiv class\x3d\\\x22table-container\\\x22 \x3e\\n  \\n  \x3cdiv style\x3d\\\x22width:100%;text-align:center;font-weight:bold;font-size:120%;\\\x22 id\x3d\\\x22header\\\x22\x3e\\n    \x3ctable style\x3d\\\x22margin:auto;width:100%;max-width:500px;\\\x22\x3e\x3ctr\x3e\x3ctd style\x3d\\\x22width:30%\\\x22\x3e\x3c\\\/td\x3e\x3ctd style\x3d\\\x22width:40%;text-align:center\\\x22 id\x3d\\\x22header\\\x22\x3eマイページ\x3c\\\/td\x3e\x3ctd style\x3d\\\x22width:30%\\\x22\x3e \x3cdiv class\x3d\\\x22logoff-container\\\x22 style\x3d\\\x22background-color:transparent;margin-top:-5px;box-shadow:none\\\x22\x3e\\n      \x3cbutton class\x3d\\\x22logoff-btn\\\x22 onclick\x3d\\\x22localStorage.setItem(\x27autostart\x27,\x27false\x27);showDialog()\\\x22 style\x3d\\\x22\\\x22\x7d\x3eログイン\x3c\\\/button\x3e\\n    \x3c\\\/div\x3e  \x3c\\\/td\x3e\x3c\\\/tr\x3e\x3c\\\/table\x3e\\n  \x3c\\\/div\x3e\\n  \\n    \x3cdiv id\x3d\\\x22contents\\\x22\x3e\x3c\\\/div\x3e\\n\x3cdiv style\x3d\\\x22width:100%;height:30px;text-align:center;font-weight:bold;font-size:120%;\\\x22\x3e\\n\x3cform class\x3d\\\x22custom-form\\\x22 \x3e\\n    \x3cdiv class\x3d\\\x22form-group\\\x22\x3e\\n      \x3cbr\x3e\\n      \x3clabel for\x3d\\\x22txt_email1\\\x22\x3eメールアドレス\x3c\\\/label\x3e\x3cBR\x3e\\n      \x3cinput type\x3d\\\x22email\\\x22 id\x3d\\\x22txt_email1\\\x22 name\x3d\\\x22txt_email1\\\x22 readonly required\x3e\\n      \x3cdiv style\x3d\\\x22width:100%;text-align:right\\\x22\x3e\\n      \x3cbutton type\x3d\\\x22button\\\x22 class\x3d\\\x22auth_Button\\\x22 onclick\x3d\\\x22passdialog.showModal()\\\x22 id\x3d\\\x22btn_changePasswordMain\\\x22 style\x3d\\\x22width:10em\\\x22\x3eパスワード変更\x3c\\\/button\x3e\\n      \x3c\\\/div\x3e\\n\\n \x3c\\\/div\x3e\\n    \x3cdiv class\x3d\\\x22form-group\\\x22\x3e\\n      \\n      \x3clabel for\x3d\\\x22txt_email2\\\x22\x3e追加のメールアドレス\x3c\\\/label\x3e\x3cBR\x3e\\n      \x3cinput type\x3d\\\x22email\\\x22 required oninput\x3d\\\x22if(this.checkValidity()) \x7bdocument.getElementById(\x27auth_Button2_1\x27).disabled\x3dfalse\x7d else \x7b\x7bdocument.getElementById(\x27auth_Button2_1\x27).disabled\x3dtrue\x7d\x7d \\\x22 id\x3d\\\x22txt_email2\\\x22 name\x3d\\\x22txt_email2\\\x22\x3e\\n      \x3cdiv style\x3d\\\x22width:100%;text-align:right\\\x22\x3e\\n      \x3cbutton type\x3d\\\x22button\\\x22 class\x3d\\\x22auth_Button\\\x22 onclick\x3d\\\x22auth_Mail2(document.getElementById(\x27txt_email2\x27).value)\\\x22 id\x3d\\\x22auth_Button2_1\\\x22 style\x3d\\\x22width:10em\\\x22 disabled\x3e認証コードを送信\x3c\\\/button\x3e\\n      \x3c\\\/div\x3e\\n    \x3c\\\/div\x3e\\n      \\n\x3cdiv style\x3d\\\x22font-size:100%;margin-left:15px;margin-right:15px;text-align:left\\\x22\x3e\\n      \x3cbr\x3e\\n      \x3cli\x3eログイン用のメールアドレスの他に、会社もしくは個人用にメールアドレスを追加できます。\x3c\\\/li\x3e\\n      \x3cli\x3e追加のメールアドレスを入力し「認証コード」ボタンをクリックして、送信された認証コードを入力して認証してください。\x3c\\\/li\x3e      \\n      \x3c\\\/div\x3e  \\n      \x3c\\\/form\x3e  \\n    \x3c\\\/div\x3e\\n\\n  \x3c\\\/div\x3e\\n  \x3cdialog id\x3d\\\x22dlg_passwordChange\\\x22 style\x3d\\\x22max-width:600px;\\\x22\x3e\\n        \x3cdiv id\x3d\\\x22messagePass1\\\x22 style\x3d\\\x22height:1em;text-align:left\\\x22\x3eパスワードを変更してください。\x3cbr\x3e\x3c\\\/div\x3e\\n        \x3cdiv id\x3d\\\x22messagePass2\\\x22 style\x3d\\\x22height:3em;text-align:left\\\x22\x3e英大文字・英小文字・数字・記号（!@;:）の4種類の文字種のうち3種類を含む8文字以上の文字列\x3c\\\/div\x3e\x3cbr\x3e\\n        \x3cinput type\x3d\\\x22text\\\x22 required placeholder\x3d\\\x22パスワードの入力\\\x22 id\x3d\\\x22txt_passwordChange\\\x22 name\x3d\\\x22txt_passwordChange\\\x22 pattern\x3d\\\x22^\x5ba-zA-Z0-9#!@;:\x5d\x7b8,\x7d$\\\x22 required oninput\x3d\\\x22if(this.checkValidity())\x7bdocument.getElementById(\x27btn_passwordChange\x27).disabled\x3dfalse\x7d else \x7bdocument.getElementById(\x27btn_passwordChange\x27).disabled\x3dtrue\x7d\\\x22\x3e\\n        \x3cbutton type\x3d\\\x22button\\\x22 class\x3d\\\x22auth_Button\\\x22 onclick\x3d\\\x22changePassword()\\\x22 id\x3d\\\x22btn_passwordChange\\\x22 disabled\x3e変更\x3c\\\/button\x3e\\n  \x3c\\\/dialog\x3e\\n  \\n  \x3cdialog id\x3d\\\x22authDialog4Mail2\\\x22 style\x3d\\\x22max-width:600px;\\\x22\x3e\\n        \x3cdiv id\x3d\\\x22message2\\\x22 style\x3d\\\x22height:4em;text-align:left\\\x22\x3e\x3c\\\/div\x3e\x3cbr\x3e\\n        \x3cdiv id\x3d\\\x22message2_1\\\x22 style\x3d\\\x22height:1em;text-align:left\\\x22\x3e\x3c\\\/div\x3e\x3cbr\x3e\\n        \x3cinput type\x3d\\\x22text\\\x22 required placeholder\x3d\\\x22認証コードを入力\\\x22 id\x3d\\\x22authcode2\\\x22 name\x3d\\\x22authcode2\\\x22 required \x3e\\n        \x3cbutton type\x3d\\\x22button\\\x22 class\x3d\\\x22auth_Button\\\x22 onclick\x3d\\\x22checkAuth2()\\\x22 id\x3d\\\x22auth_Button2_1\\\x22\x3e認証\x3c\\\/button\x3e\\n  \x3c\\\/dialog\x3e\\n  \x3cdialog id\x3d\\\x22authDialog\\\x22 style\x3d\\\x22max-width:600px;\\\x22\x3e\\n    \x3cbutton class\x3d\\\x22close-btn\\\x22 onclick\x3d\\\x22closeDialog(true);\\\x22\x3e✖\x3c\\\/button\x3e\\n    \x3cdiv class\x3d\\\x22h2\\\x22\x3eログイン\x3cdiv\x3e\\n    \x3cform\x3e\\n      \x3cbr\x3e\\n      \x3cbr\x3e\\n      \x3ctable style\x3d\\\x22width:100%\\\x22\x3e\\n        \x3ctr\x3e\\n          \x3ctd style\x3d\\\x22width:6em;max-width:6em;\\\x22\x3e\\n            \x3clabel for\x3d\\\x22email\\\x22\x3eメールアドレス\x3c\\\/label\x3e\x3c\\\/td\x3e\\n            \x3ctd\x3e\x3cinput type\x3d\\\x22email\\\x22 required placeholder\x3d\\\x22メールアドレスを入力\\\x22 id\x3d\\\x22email\\\x22 required \x3e\x3c\\\/td\x3e\x3c\\\/tr\x3e\\n            \x3ctr\x3e\x3ctd\x3e        \\n            \x3clabel for\x3d\\\x22authCode\\\x22\x3eパスワード\x3c\\\/label\x3e\x3c\\\/td\x3e\\n            \x3ctd\x3e\x3cinput type\x3d\\\x22text\\\x22 required placeholder\x3d\\\x22パスワードを入力\\\x22 id\x3d\\\x22authCode\\\x22\x3e\x3c\\\/td\x3e\x3c\\\/tr\x3e\\n      \x3ctr\x3e\x3ctd style\x3d\\\x22text-align:right\\\x22 colspan\x3d\\\x222\\\x22\x3e\x3clabel for\x3d\\\x22check\\\x22 style\x3d\\\x22display:inline;font-size:90%;display:inline\\\x22\x3eログイン情報を保存\x3c\\\/label\x3e\x3cinput style\x3d\\\x22max-width:20px;position:\x27relative\x27;top:10px;zoom:150%\\\x22 name\x3d\\\x22check\\\x22 id\x3d\\\x22check\\\x22 type\x3d\\\x22checkbox\\\x22\x3e\x3c\\\/td\x3e\x3c\\\/tr\x3e\\n      \x3ctr\x3e\x3ctd style\x3d\\\x22text-align:right\\\x22 colspan\x3d\\\x222\\\x22\x3e\x3clabel for\x3d\\\x22check\\\x22 style\x3d\\\x22display:inline;font-size:90%;display:inline\\\x22\x3e自動でログインする\x3c\\\/label\x3e\x3cinput style\x3d\\\x22max-width:20px;position:\x27relative\x27;top:10px;zoom:150%\\\x22 name\x3d\\\x22autostart\\\x22 id\x3d\\\x22autostart\\\x22 onchange\x3d\\\x22localStorage.setItem(\x27autostart\x27,this.checked?\x27true\x27:\x27false\x27)\\\x22 type\x3d\\\x22checkbox\\\x22\x3e\x3c\\\/td\x3e\x3c\\\/tr\x3e\\n      \x3c\\\/table\x3e\\n      \x3cbutton class\x3d\\\x22action\\\x22 type\x3d\\\x22button\\\x22 id\x3d\\\x22auth_Button\\\x22\x3eログイン\x3c\\\/button\x3e\\n      \x3cbr\x3e\\n      \x3cbr\x3e\\n      \x3cdiv id\x3d\x27message\x27\x3eメールアドレスとパスワードを入力してログインしてください。\x3cbr\x3e\x3cbr\x3e初回ログインやパスワードリセット時は、メールアドレスを入力し、「仮パスワード発行」をクリックしてください\x3c\\\/div\x3e\\n      \x3cbr\x3e\\n      \x3cbr\x3e\\n      \\n      \x3cbutton class\x3d\\\x22action\\\x22 type\x3d\\\x22button\\\x22  id\x3d\\\x22email_button\\\x22\x3e仮パスワードの発行\x3c\\\/button\x3e\\n\\n\\n    \x3c\\\/form\x3e\x3c\\\/div\x3e\\n  \x3c\\\/dialog\x3e\\n\\n  \x3cscript\x3e\\n    const dialog \x3d document.getElementById(\x27authDialog\x27);\\n    const passdialog \x3d document.getElementById(\x27dlg_passwordChange\x27);\\n        function showDialog()\x7b\\n          document.getElementById(\x27contents\x27).innerHTML\\n          \x3d`ログインしてください。`\\n          document.getElementById(\x27message\x27).innerHTML\x3d\x27メールアドレスとパスワードを入力してログインしてください。\x3cbr\x3e\x3cbr\x3e初回ログインやパスワードリセット時は、メールアドレスを入力し、「仮パスワード発行」をクリックしてください\x27\\n          document.getElementsByClassName(\x27logoff-btn\x27)\x5b0\x5d.innerHTML\x3d\x27ログオフ\x27\\n          document.getElementsByClassName(\x27logoff-btn\x27)\x5b0\x5d.style.visibility\x3d\x27hidden\x27\\n          let oldemail\x3dele_email.value;\\n          if(!document.getElementById(\x27check\x27).checked\x3d\x3dtrue) \x7b\\n            ele_email.value\x3d\x27\x27;\\n            ele_authCode.value\x3d\x27\x27;\\n          \x7d\\n          validity_check()\\n          \\n          saveparam \x3d localStorage.setItem(\x27loginsave\x27,document.getElementById(\x27check\x27).checked\x3d\x3dtrue)\\n          \\n          document.getElementById(\x27autostart\x27).checked\x3d(localStorage.getItem(\x27autostart\x27)\x3d\x3d\x27true\x27);\\n         \\n         \\n         \\n          google.script.run.withSuccessHandler(\\n            \\n          ).logoff(oldemail,\x27d16702db-587e-441b-a817-240fb92841b4\x27)\\n        dialog.showModal();\\n        \\n        \x7d\\n\\n        \\n        function closeDialog(flag) \x7b\\n            if (flag\x3d\x3dtrue) \x7b\\n              document.getElementsByClassName(\x27logoff-btn\x27)\x5b0\x5d.innerHTML\x3d\x27ログイン\x27\\n            \x7d else \x7b\\n              document.getElementsByClassName(\x27logoff-btn\x27)\x5b0\x5d.innerHTML\x3d\x27ログオフ\x27\\n            \x7d\\n            \\n            document.getElementsByClassName(\x27logoff-btn\x27)\x5b0\x5d.style.visibility\x3d\x27\x27            \\n            dialog.close();\\n        \x7d\\n\\n        function changePassword()\x7b\\n          document.getElementById(\x27btn_passwordChange\x27).disabled\x3dtrue;\\n          google.script.run.withSuccessHandler(ret\x3d\x3e\x7b\\n            document.getElementById(\x27txt_passwordChange\x27).value\x3d\x27\x27;\\n            document.getElementById(\x27btn_passwordChange\x27).disabled\x3dfalse;\\n            document.getElementById(\x27dlg_passwordChange\x27).close()\\n          \x7d).changePasswordGAS(document.getElementById(\x27email\x27).value,document.getElementById(\x27txt_passwordChange\x27).value)\\n        \x7d\\n  \x3c\\\/script\x3e\\n\x3c\\\/body\x3e\\n\\n\x3c\\\/html\x3e\x22,\x22ncc\x22:\x22\x7b\\\x22awhs\\\x22:true\x7d\x22\x7d", "AJuLMu3Rqg_VhO2TCNP2LMkq8T58M4BqFg:1752650928945", undefined, false , true  , "true", "https:\/\/n-3f7zxt3vlv644hzw34b6pa6ewuz7mjl4knm7tgi-0lu-script.googleusercontent.com", "");}
+el.src = 'https:\/\/n-3f7zxt3vlv644hzw34b6pa6ewuz7mjl4knm7tgi-0lu-script.googleusercontent.com\/userCodeAppPanel';
+}());
+</script><div style="display: none;" id="diff-modal" class="inject-content VfPpkd-Sx9Kwc cC1eCc UDxLd PzCPDd xP8Fvd VfPpkd-Sx9Kwc-OWXEXe-FNFY6c">
+  <div tabindex="0" class="pw1uU"></div>
+  <div class="VfPpkd-wzTsW">
+    <div class="VfPpkd-P5QLlc" role="dialog" style="min-width: 800px; width: 80vw; max-width: 1200px;">
+      <span class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+      <h2 class="VfPpkd-k2Wrsb">Diff</h2>
+      <div class="VfPpkd-cnG4Wd">
+        <div class="IDjiyd">
+          <div class="yfxL5b">
+            <div class="KzlEGf">notice: only manifest, script and html files will be synced</div>
+            <div class="scm-diff" style="overflow-y: auto; max-height:700px;">
+            </div>
+            <div class="fF5xed scm-comment">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Comment
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="commit-comment" class="VfPpkd-fmcmS-wGMbrd " placeholder=" Comment " required=""></label>
+              </div>
+            </div>
+            <div class="fF5xed gist-desc" style="display: none;">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Gist description
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="gist-desc" class="VfPpkd-fmcmS-wGMbrd " placeholder=" Gist description " required=""></label>
+              </div>
+            </div>
+          </div>
+          <div class="EgwMee">
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-diff-modal-close" data-is-touch-wrapper="true">
+              <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Cancel</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-modal-button" data-is-touch-wrapper="true"><button id="scm-diff-handler" class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span id="scm-diff-label" class="VfPpkd-vQzf8d"></span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="VfPpkd-IE5DDf"></div>
+  <div tabindex="0" class="pw1uU"></div>
+</div>
+
+<div style="display: none;" id="config-modal" class="inject-content VfPpkd-Sx9Kwc cC1eCc UDxLd PzCPDd xP8Fvd VfPpkd-Sx9Kwc-OWXEXe-FNFY6c">
+  <div tabindex="0" class="pw1uU"></div>
+  <div class="VfPpkd-wzTsW">
+    <div class="VfPpkd-P5QLlc" role="dialog">
+      <span class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+      <h2 class="VfPpkd-k2Wrsb">Config sync options</h2>
+      <div class="VfPpkd-cnG4Wd">
+        <div class="IDjiyd">
+          <div class="yfxL5b">
+            <div class="Y4p8ve">
+              <div class="v8XkYb">
+                <div>
+                  <button id="suffix-select" class="uDEFOc">
+                    <div class="PkPADb"></div>
+                    <div class="FjocWc">Sync type</div>
+                    <div class="sL3KDe">
+                      <div id="selected-suffix" class="icpHQc">.gs</div>
+                      <div class="SQnavd"><i class="material-icons-extended VfPpkd-kBDsod">arrow_drop_down</i></div>
+                    </div>
+                  </button>
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Extension for
+                    script file to sync</p>
+                </div>
+                <div id="suffix-list" class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf Xw7Kb r32ngd" style="transform-origin: center top; left: 0px; top: 64px; max-height: 536px;">
+                  <ul class="VfPpkd-rymPhb VfPpkd-rymPhb-OWXEXe-QGMm5d-rymPhb r6B9Fd" role="menu" tabindex="-1">
+                    <span aria-hidden="true" class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+                    <li class="suffix-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+                      <span class="VfPpkd-rymPhb-pZXsl"></span>
+                      <span class="VfPpkd-rymPhb-b9t22c">.gs</span></li>
+                    <li class="suffix-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+                      <span class="VfPpkd-rymPhb-pZXsl"></span>
+                      <span class="VfPpkd-rymPhb-b9t22c">.js</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="fF5xed">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Ignore file patterns
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="ignore-pattern" class="VfPpkd-fmcmS-wGMbrd" placeholder="Ignore patterns"></label>
+                <div class="VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc">
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Use regex
+                    separated by ';'</p>
+                </div>
+              </div>
+            </div>
+            <div class="VfPpkd-I9GLp-yrriRe MlG5Jc ZCuY4">
+              <div class="VfPpkd-MPu53c VfPpkd-MPu53c-OWXEXe-gk6SMd VfPpkd-MPu53c-OWXEXe-dgl2Hf Ne8lhe swXlm az2ine VfPpkd-MPu53c-OWXEXe-mWPk3d">
+                <input id="manage-manifest" class="VfPpkd-muHVFf-bMcfAe" type="checkbox" checked="">
+                <div class="VfPpkd-YQoJzd"><svg class="VfPpkd-HUofsb" viewBox="0 0 24 24">
+                    <path class="VfPpkd-HUofsb-Jt5cK" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                  </svg>
+                  <div class="VfPpkd-SJnn3d"></div>
+                </div>
+                <div class="VfPpkd-OYHm6b"></div>
+              </div>
+              <label for="manage-manifest" class="VfPpkd-V67aGc">Manage manifest file</label>
+            </div>
+          </div>
+          <div class="EgwMee">
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-config-modal-close" data-is-touch-wrapper="true">
+              <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Cancel</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-modal-button" data-is-touch-wrapper="true"><button id="save-config" class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Save</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="VfPpkd-IE5DDf"></div>
+  <div tabindex="0" class="pw1uU"></div>
+</div>
+
+<div style="display: none;" id="repo-modal" class="inject-content VfPpkd-Sx9Kwc cC1eCc UDxLd PzCPDd xP8Fvd VfPpkd-Sx9Kwc-OWXEXe-FNFY6c">
+  <div tabindex="0" class="pw1uU"></div>
+  <div class="VfPpkd-wzTsW">
+    <div class="VfPpkd-P5QLlc" role="dialog">
+      <span class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+      <h2 class="VfPpkd-k2Wrsb">Create Repository</h2>
+      <div class="VfPpkd-cnG4Wd">
+        <div class="IDjiyd">
+          <div class="yfxL5b">
+            <div class="Y4p8ve">
+              <div class="v8XkYb">
+                <div>
+                  <button id="repo-owner-select" class="uDEFOc">
+                    <div class="PkPADb"></div>
+                    <div class="FjocWc">Repository owner</div>
+                    <div class="sL3KDe">
+                      <div id="selected-repo-owner" class="icpHQc">malnage.seminar@malnage.jp</div>
+                      <div class="SQnavd"><i class="material-icons-extended VfPpkd-kBDsod">arrow_drop_down</i></div>
+                    </div>
+                  </button>
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Choose
+                    repository owner</p>
+                </div>
+                <div id="repo-owner-list" class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf Xw7Kb r32ngd" style="transform-origin: center top; left: 0px; top: 64px; max-height: 536px;">
+                  <ul class="VfPpkd-rymPhb VfPpkd-rymPhb-OWXEXe-QGMm5d-rymPhb r6B9Fd" role="menu" tabindex="-1">
+                    <span aria-hidden="true" class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+                  </ul>
+                <li class="repo-owner-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+            <span class="VfPpkd-rymPhb-pZXsl"></span>
+            <span class="VfPpkd-rymPhb-b9t22c">malnage.seminar@malnage.jp</span></li></div>
+              </div>
+            </div>
+            <div class="fF5xed">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Repository name
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="new-repo-name" class="VfPpkd-fmcmS-wGMbrd" placeholder="Repository name"></label>
+                <div class="VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc">
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Input the
+                    repository name</p>
+                </div>
+              </div>
+            </div>
+            <div class="Y4p8ve" style="padding-top: 15px;">
+              <div class="v8XkYb">
+                <div>
+                  <button id="repo-type-select" class="uDEFOc">
+                    <div class="PkPADb"></div>
+                    <div class="FjocWc">Type</div>
+                    <div class="sL3KDe">
+                      <div id="selected-repo-type" class="icpHQc">Public</div>
+                      <div class="SQnavd"><i class="material-icons-extended VfPpkd-kBDsod">arrow_drop_down</i></div>
+                    </div>
+                  </button>
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Choose
+                    repository type</p>
+                </div>
+                <div id="repo-type-list" class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf Xw7Kb r32ngd" style="transform-origin: center top; left: 0px; top: 64px; max-height: 536px;">
+                  <ul class="VfPpkd-rymPhb VfPpkd-rymPhb-OWXEXe-QGMm5d-rymPhb r6B9Fd" role="menu" tabindex="-1">
+                    <span aria-hidden="true" class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+                    <li class="repo-type-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+                      <span class="VfPpkd-rymPhb-pZXsl"></span>
+                      <span class="VfPpkd-rymPhb-b9t22c">Public</span></li>
+                    <li class="repo-type-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+                      <span class="VfPpkd-rymPhb-pZXsl"></span>
+                      <span class="VfPpkd-rymPhb-b9t22c">Private</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="fF5xed">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Description
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="new-repo-desc" class="VfPpkd-fmcmS-wGMbrd" placeholder="Description"></label>
+                <div class="VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc">
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Add
+                    description for this repository</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="EgwMee">
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-repo-modal-close" data-is-touch-wrapper="true">
+              <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Cancel</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-modal-button" data-is-touch-wrapper="true"><button id="scm-create-repo" class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Create</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="VfPpkd-IE5DDf"></div>
+  <div tabindex="0" class="pw1uU"></div>
+</div>
+
+<div style="display: none;" id="gist-modal" class="inject-content VfPpkd-Sx9Kwc cC1eCc UDxLd PzCPDd xP8Fvd VfPpkd-Sx9Kwc-OWXEXe-FNFY6c">
+  <div tabindex="0" class="pw1uU"></div>
+  <div class="VfPpkd-wzTsW">
+    <div class="VfPpkd-P5QLlc" role="dialog">
+      <span class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+      <h2 class="VfPpkd-k2Wrsb">Create Gist</h2>
+      <div class="VfPpkd-cnG4Wd">
+        <div class="IDjiyd">
+          <div class="yfxL5b">
+            <div class="Y4p8ve" style="padding-top: 15px;">
+              <div class="v8XkYb">
+                <div>
+                  <button id="gist-type-select" class="uDEFOc">
+                    <div class="PkPADb"></div>
+                    <div class="FjocWc">Type</div>
+                    <div class="sL3KDe">
+                      <div id="selected-gist-type" class="icpHQc">Public</div>
+                      <div class="SQnavd"><i class="material-icons-extended VfPpkd-kBDsod">arrow_drop_down</i></div>
+                    </div>
+                  </button>
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Choose
+                    repository type</p>
+                </div>
+                <div id="gist-type-list" class="VfPpkd-xl07Ob-XxIAqe VfPpkd-xl07Ob q6oraf P77izf Xw7Kb r32ngd" style="transform-origin: center top; left: 0px; top: 64px; max-height: 536px;">
+                  <ul class="VfPpkd-rymPhb VfPpkd-rymPhb-OWXEXe-QGMm5d-rymPhb r6B9Fd" role="menu" tabindex="-1">
+                    <span aria-hidden="true" class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+                    <li class="gist-type-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+                      <span class="VfPpkd-rymPhb-pZXsl"></span>
+                      <span class="VfPpkd-rymPhb-b9t22c">Public</span></li>
+                    <li class="gist-type-option VfPpkd-rymPhb-ibnC6b VfPpkd-rOvkhd-rymPhb-ibnC6b-OWXEXe-tPcied-hXIJHe" role="menuitem" tabindex="-1">
+                      <span class="VfPpkd-rymPhb-pZXsl"></span>
+                      <span class="VfPpkd-rymPhb-b9t22c">Secret</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="fF5xed">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Description
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="new-gist-name" class="VfPpkd-fmcmS-wGMbrd" placeholder="Description"></label>
+                <div class="VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc">
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Add
+                    description for this gist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="EgwMee">
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-gist-modal-close" data-is-touch-wrapper="true">
+              <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Cancel</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-modal-button" data-is-touch-wrapper="true"><button id="scm-create-gist" class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Create</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="VfPpkd-IE5DDf"></div>
+  <div tabindex="0" class="pw1uU"></div>
+</div>
+
+<div style="display: none;" id="branch-modal" class="inject-content VfPpkd-Sx9Kwc cC1eCc UDxLd PzCPDd xP8Fvd VfPpkd-Sx9Kwc-OWXEXe-FNFY6c">
+  <div tabindex="0" class="pw1uU"></div>
+  <div class="VfPpkd-wzTsW">
+    <div class="VfPpkd-P5QLlc" role="dialog">
+      <span class="VfPpkd-BFbNVe-bF1uUb NZp2ef"></span>
+      <h2 class="VfPpkd-k2Wrsb">Create Branch</h2>
+      <div class="VfPpkd-cnG4Wd">
+        <div class="IDjiyd">
+          <div class="yfxL5b">
+            <div class="fF5xed">
+              <div class="Ufn6O D3p47c">
+                <label class="VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc VfPpkd-fmcmS-yrriRe-OWXEXe-V67aGc-NLUYnc cfWmIb orScbe">
+                  <span class="VfPpkd-NSFCdd-i5vt6e VfPpkd-NSFCdd-i5vt6e-OWXEXe-NSFCdd">
+                    <span class="VfPpkd-NSFCdd-Brv4Fb"> </span>
+                    <span class="VfPpkd-NSFCdd-Ra9xwd">
+                      <span class="VfPpkd-NLUYnc-V67aGc VfPpkd-NLUYnc-V67aGc-OWXEXe-ztc6md VfPpkd-NLUYnc-V67aGc-OWXEXe-TATcMc-KLRBe">
+                        Branch name
+                      </span>
+                    </span>
+                    <span class="VfPpkd-NSFCdd-MpmGFe"></span>
+                  </span>
+                  <input type="text" value="" autocomplete="off" id="new-branch-name" class="VfPpkd-fmcmS-wGMbrd" placeholder="Repository name"></label>
+                <div class="VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc">
+                  <p class="VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS-OWXEXe-zvnfze">Input the
+                    branch name</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="EgwMee">
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-branch-modal-close" data-is-touch-wrapper="true">
+              <button class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Cancel</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+            <div class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb scm-modal-button" data-is-touch-wrapper="true"><button id="scm-create-branch" class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc hMmmDf">
+                <div class="VfPpkd-Jh9lGc"></div>
+                <span class="VfPpkd-vQzf8d">Create</span>
+                <div class="VfPpkd-RLmnJb"></div>
+              </button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="VfPpkd-IE5DDf"></div>
+  <div tabindex="0" class="pw1uU"></div>
+</div>
+
+<!-- 
+<div id="branch-modal" class="modal-dialog" tabindex="0" role="dialog" style="left: 274px; top: 280px; display: none;">
+  <div class="modal-dialog-title modal-dialog-title-draggable">
+    <span class="modal-dialog-title-text">Create Branch</span>
+    <span class="scm-branch-modal-close modal-dialog-title-close"></span>
+  </div>
+  <div class="modal-dialog-content">
+    <div class="goog-inline-block" style="width: 600px; height: 90px;">
+      <div class="scm-branch">
+        <table class="properties-data-dialog-table">
+          <tbody>
+            <tr class="properties-data-dialog-table-header">
+              <th>Properties</th>
+              <th>Value</th>
+              <th></th>
+            </tr>
+            <tr class="properties-data-dialog-table-row">
+              <td>
+                <div>Branch Name</div>
+              </td>
+              <td><input id="new-branch-name" class="editable-row-input large-input" type="text"
+                  placeholder="new-branch-name"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="scm-modal-button modal-dialog-buttons">
+    <button id="scm-create-branch" type="button" class="goog-buttonset-default goog-buttonset-action"
+      disabled="true">Create</button>
+    <button type="button" class="scm-branch-modal-close">Cancel</button>
+  </div>
+</div> -->
+
+
+</body></html>

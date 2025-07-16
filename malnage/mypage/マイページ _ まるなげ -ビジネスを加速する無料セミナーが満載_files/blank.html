@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)https://n-3f7zxt3vlv644hzw34b6pa6ewuz7mjl4knm7tgi-0lu-script.googleusercontent.com/userCodeAppPanel -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./jsapi"></script><script>window.parent.maeExportApis_();</script>
+
+
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マイページ</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      font-size:100%;
+      margin:0px;
+      background-color: #e8f2fa;
+      width:100%;
+      height:100svh;
+       
+    }
+.table-container {
+      
+      width:100%;
+      margin: 0 auto;
+      overflow-y: auto;
+      height: 100%;
+    }
+
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    thead {
+      position: sticky;
+      top: 0;
+      background-color: #e8f2fa;
+      z-index: 1;
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2);
+    }
+    th, td {
+      
+      padding: 5px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      font-weight: bold;
+      color: black;
+    }
+    
+    img {
+      max-height:100px;
+      max-width: 125px;
+      object-fit: cover;
+    }
+    dialog {
+      width: 95%;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border: none;
+      background-color: #ffefd5;
+       
+      text-align: center;
+      position: relative;
+      top: -80px;
+    }
+
+    .h2 {
+      color: black;
+       
+      font-size: 120%;
+      margin-top:0px;
+    }
+
+    .form-group {
+      margin-bottom: 5px;
+      text-align:left;
+    }
+
+    label {
+      color: black;
+      font-size: 80%;
+      margin:0px;
+       
+    }
+
+    input {
+      width: 95%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 2px solid #b29255;
+       
+      border-radius: 10px;
+      background-color: #fffaf0;
+       
+      font-size:100%;
+    }
+
+    button,button:active {
+      padding: 8px 15px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #8c6c34;      
+       
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size:90%;
+    }
+
+    .close-btn {
+      background-color: #ffe4b5;
+       
+      padding: 5px 10px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 100%;
+    }
+
+    .action {
+      width: 200px;
+      margin-bottom: 5px;
+    }
+
+    .action:disabled {
+      opacity: 50%;
+    }
+    .logoff-container {
+      position: sticky;
+      top: 0;
+      right: 0;
+      background-color: #f8f9fa;
+      z-index: 2;
+      text-align: right;
+      padding: 0px;
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2);
+    }
+    .logoff-btn, .auth_Button {
+      width:100px;
+      padding: 5px 10px;
+      background-color: #fc7830;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left:5px;
+      margin-right:0px;
+      margin-bottom:5px;
+      font-size:100%;
+
+    }
+
+         .custom-form {
+      width:80%;
+      max-width:500px;
+      margin:auto;
+      text-align:left;
+    }
+
+    .custom-form .form-group {
+      display: block;
+      align-items: center;
+      margin-bottom: 0em;
+    }
+
+    .custom-form .form-group label {
+    }
+
+    .custom-form .form-group input {
+      flex: 1;
+      padding: 0.5em;
+      font-size: 100%;
+      box-sizing: border-box;
+    }
+    #txt_email1:read-only {
+      background-color:#cccccc;
+    }
+    #txt_email1 {
+      width:100%;
+    }
+    #txt_email2 {
+      width:100%;
+    }
+
+    #auth_Button2_1:disabled, #auth_Button2:disabled, #btn_passwordChange:disabled {
+      background-color:gray;
+    }
+    #contents {
+      display:block;
+      height:250px;
+    }
+    li {
+      text-indent: -1em;
+      padding-left: 1em;
+      font-size:90%;
+      font-weight:400;
+    }
+    #message {
+      font-size:90%;
+      text-align:left;
+      height:7em;
+    }
+  </style>
+  <script>
+    let ele_email=null;
+      let ele_authCode=null
+
+      let btn_email=null
+      let btn_authCode=null;
+      let initparam=[];
+      let saveparam=null;
+      let autostart=null
+      window.onload=(e)=>{
+        ele_email=document.getElementById('email')
+        ele_authCode=document.getElementById('authCode')
+        btn_email=document.getElementById('email_button')
+        btn_authCode=document.getElementById('auth_Button')
+
+        ele_email.addEventListener('input',(e)=>{validity_check()})
+        ele_authCode.addEventListener('input',(e)=>{validity_check()})
+        saveparam = localStorage.getItem('loginsave') || 'false';
+        autostart = localStorage.getItem('autostart') || 'false';
+        document.getElementById('autostart').checked=(saveparam!='false')
+        document.getElementById('check').checked=(saveparam!='false')
+        if(saveparam=='true'){
+          initparam = JSON.parse(localStorage.getItem('login')||'["",""]')
+        }
+        ele_email.value=initparam[0]||''
+        ele_authCode.value=initparam[1]||''
+        validity_check()
+        if(autostart=='true') {
+          login()
+        } else {
+          showDialog()
+        }
+        
+        btn_email.addEventListener('click',(e)=>{
+          console.log(ele_email)
+          ele_email.disabled=true;
+          
+          google.script.run.withSuccessHandler(ret=>{
+              ele_email.disabled=false;
+              document.body.style.opacity=1;
+              document.getElementById('message').innerHTML='メールアドレス宛に、仮パスワードを送信しました。'
+              if('false'=='true') {
+          document.getElementById('message').innerHTML
+            =`(テストモード)仮パスワードは、test@malnage.com に送信されます。コードは常に "TESTCODE" です。`
+          ele_authCode.value='TESTCODE'
+          validity_check()
+
+        }
+
+          
+          
+          }).sendToken(ele_email.value,'d16702db-587e-441b-a817-240fb92841b4')
+        })
+
+        btn_authCode.addEventListener('click',(e)=>{
+          login()
+        })
+
+      }
+      function login(){
+          console.log('LOGIN')
+          let email=ele_email.value
+          let authCode=ele_authCode.value
+          document.body.style.cursor ='wait';
+          document.body.inert=true
+          document.body.opacity=.5;
+          document.getElementById('message').innerHTML='しばらくお待ちください・・・'
+          document.getElementById('contents').innerHTML='<div style="width:100%;text-align:center"><br><br><br><br>しばらくお待ちください・・・</div>'
+  
+          google.script.run.withSuccessHandler((ret0=>{
+            document.body.inert=false
+            document.body.opacity=.1;
+
+            document.body.style.cursor ='default';
+            console.log(ret0)
+              let ret=ret0[0]
+                document.getElementById('auth_Button2_1').disabled=true;
+              document.getElementById('txt_email2').value=ret0[1] || '';
+              if((ret0[1] || '')==''){
+                localStorage.setItem('downloadtool',JSON.stringify([email,true]))
+              } else {
+                localStorage.setItem('downloadtool',JSON.stringify([email+","+(ret0[1] || ''),true]))                
+              }
+              if(ret.indexOf('ERROR')==-1){
+ 
+                if('マイページ'=='マイページ'){
+                  document.getElementById('contents').innerHTML=ret;
+                } else {
+                  document.getElementById('contents').innerHTML='<div style="width:90%;text-align:left">情報を取得しました。閉じるボタンをクリックして資料申請を継続してください。<BR>連携を解除する場合は、ログオフしてください。</div><button class="logoff-btn" onclick="localStorage.setItem(\'autostart\',\'false\');showDialog()"}>ログオフ</button>'
+                } 
+                document.body.style.opacity=1;
+                closeDialog(false)
+                console.log(document.getElementById('autostart').checked)
+                if(document.getElementById('check').checked){
+                  localStorage.setItem('login',JSON.stringify([email,authCode]))
+                  localStorage.setItem('autostart',document.getElementById('autostart').checked)
+                } else {
+                  localStorage.removeItem('login')
+                  localStorage.removeItem('loginsave')
+                  localStorage.removeItem('autostart')
+                  localStorage.removeItem('downloadtool')
+                }
+                document.getElementById('txt_email1').value=ele_email.value;
+
+
+
+
+              } else {
+                if (!dialog.open) {
+                  document.getElementById('contents').innerHTML=ret 
+                  showDialog()
+                }
+                if(ele_email.value==''){
+                  document.getElementById('message').innerHTML='メールアドレスとパスワードを入力してログインしてください。<br><br>初回ログインやパスワードリセット時は、メールアドレスを入力し、「仮パスワード発行」をクリックしてください'
+                } else {
+                  document.getElementById('message').innerHTML='メールアドレスかパスワードが正しくありません。'
+                }
+              }}
+          )).getMyPage(ele_email.value,ele_authCode.value,'d16702db-587e-441b-a817-240fb92841b4')
+      }
+      function validity_check(){
+        
+        if('false'=='true') {
+          document.getElementById('message').innerHTML
+            =`(テストモード)認証コードは、test@malnage.com に送信されます。コードは常に "TESTCODE" です。`
+        }
+
+        if(ele_email.checkValidity()){
+          ele_authCode.disabled=false;
+          btn_authCode.disabled=false
+          btn_email.disabled=false;
+        } else {
+          ele_authCode.disabled=true;
+          btn_authCode.disabled=true;
+          btn_email.disabled=true;
+          console.log(ele_authCode.value)
+        }
+        if(ele_authCode.checkValidity() && !ele_authCode.disabled){
+          btn_authCode.disabled=false;
+          } else {
+          btn_authCode.disabled=true;
+        }
+      }
+
+      function auth_Mail2(email){
+        google.script.run.withSuccessHandler(ret=>{
+          document.getElementById('message2').innerHTML=document.getElementById('txt_email2').value+' 宛に認証コードが送信されました。認証コードをリクエストしたページに認証コードを入力し、「認証」をクリックしてください。'
+
+          document.getElementById('authDialog4Mail2').showModal()
+        }).gasMail2GenAuth(document.getElementById('txt_email2').value)
+      }
+
+      function checkAuth2(){
+        document.getElementById('message2_1').innerHTML='しばらくお待ちください・・・'
+        google.script.run.withSuccessHandler(ret=>{
+          if(ret){
+            document.getElementById('message2_1').innerHTML='登録されました。'
+            window.setTimeout(function(){document.getElementById('authDialog4Mail2').close()},1000)
+            document.getElementById('auth_Button2_1').disabled=true;
+          } else {
+            document.getElementById('message2_1').innerHTML='認証コードが異なります。'
+          }
+        }).checkAuth2GAS(document.getElementById('txt_email2').value,document.getElementById('authcode2').value,document.getElementById('txt_email1').value)
+      }
+
+      function passwordChange(){
+        google.script.run.withSuccessHandler(ret=>{
+          if(ret){
+            document.getElementById('message2_1').innerHTML='登録されました。'
+            window.setTimeout(function(){document.getElementById('passdialog').close()},1000)
+          } else {
+            document.getElementById('message2_1').innerHTML='認証コードが異なります。'
+          }
+        }).passChaangeGAS(document.getElementById('txt_email2').value,document.getElementById('authcode2').value,document.getElementById('txt_email1').value)
+      }
+      
+  </script>
+</head>
+
+<body>
+
+<div class="table-container">
+  
+  <div style="width:100%;text-align:center;font-weight:bold;font-size:120%;" id="header">
+    <table style="margin:auto;width:100%;max-width:500px;"><tbody><tr><td style="width:30%"></td><td style="width:40%;text-align:center" id="header">マイページ</td><td style="width:30%"> <div class="logoff-container" style="background-color:transparent;margin-top:-5px;box-shadow:none">
+      <button class="logoff-btn" onclick="localStorage.setItem(&#39;autostart&#39;,&#39;false&#39;);showDialog()" style="visibility: hidden;" }="">ログオフ</button>
+    </div>  </td></tr></tbody></table>
+  </div>
+  
+    <div id="contents">ログインしてください。</div>
+<div style="width:100%;height:30px;text-align:center;font-weight:bold;font-size:120%;">
+<form class="custom-form">
+    <div class="form-group">
+      <br>
+      <label for="txt_email1">メールアドレス</label><br>
+      <input type="email" id="txt_email1" name="txt_email1" readonly="" required="">
+      <div style="width:100%;text-align:right">
+      <button type="button" class="auth_Button" onclick="passdialog.showModal()" id="btn_changePasswordMain" style="width:10em">パスワード変更</button>
+      </div>
+
+ </div>
+    <div class="form-group">
+      
+      <label for="txt_email2">追加のメールアドレス</label><br>
+      <input type="email" required="" oninput="if(this.checkValidity()) {document.getElementById(&#39;auth_Button2_1&#39;).disabled=false} else {{document.getElementById(&#39;auth_Button2_1&#39;).disabled=true}} " id="txt_email2" name="txt_email2">
+      <div style="width:100%;text-align:right">
+      <button type="button" class="auth_Button" onclick="auth_Mail2(document.getElementById(&#39;txt_email2&#39;).value)" id="auth_Button2_1" style="width:10em" disabled="">認証コードを送信</button>
+      </div>
+    </div>
+      
+<div style="font-size:100%;margin-left:15px;margin-right:15px;text-align:left">
+      <br>
+      <li>ログイン用のメールアドレスの他に、会社もしくは個人用にメールアドレスを追加できます。</li>
+      <li>追加のメールアドレスを入力し「認証コード」ボタンをクリックして、送信された認証コードを入力して認証してください。</li>      
+      </div>  
+      </form>  
+    </div>
+
+  </div>
+  <dialog id="dlg_passwordChange" style="max-width:600px;">
+        <div id="messagePass1" style="height:1em;text-align:left">パスワードを変更してください。<br></div>
+        <div id="messagePass2" style="height:3em;text-align:left">英大文字・英小文字・数字・記号（!@;:）の4種類の文字種のうち3種類を含む8文字以上の文字列</div><br>
+        <input type="text" required="" placeholder="パスワードの入力" id="txt_passwordChange" name="txt_passwordChange" pattern="^[a-zA-Z0-9#!@;:]{8,}$" oninput="if(this.checkValidity()){document.getElementById(&#39;btn_passwordChange&#39;).disabled=false} else {document.getElementById(&#39;btn_passwordChange&#39;).disabled=true}">
+        <button type="button" class="auth_Button" onclick="changePassword()" id="btn_passwordChange" disabled="">変更</button>
+  </dialog>
+  
+  <dialog id="authDialog4Mail2" style="max-width:600px;">
+        <div id="message2" style="height:4em;text-align:left"></div><br>
+        <div id="message2_1" style="height:1em;text-align:left"></div><br>
+        <input type="text" required="" placeholder="認証コードを入力" id="authcode2" name="authcode2">
+        <button type="button" class="auth_Button" onclick="checkAuth2()" id="auth_Button2_1">認証</button>
+  </dialog>
+  <dialog id="authDialog" style="max-width:600px;" open="">
+    <button class="close-btn" onclick="closeDialog(true);">✖</button>
+    <div class="h2">ログイン<div>
+    <form>
+      <br>
+      <br>
+      <table style="width:100%">
+        <tbody><tr>
+          <td style="width:6em;max-width:6em;">
+            <label for="email">メールアドレス</label></td>
+            <td><input type="email" required="" placeholder="メールアドレスを入力" id="email"></td></tr>
+            <tr><td>        
+            <label for="authCode">パスワード</label></td>
+            <td><input type="text" required="" placeholder="パスワードを入力" id="authCode"></td></tr>
+      <tr><td style="text-align:right" colspan="2"><label for="check" style="display:inline;font-size:90%;display:inline">ログイン情報を保存</label><input style="max-width:20px;position:&#39;relative&#39;;top:10px;zoom:150%" name="check" id="check" type="checkbox"></td></tr>
+      <tr><td style="text-align:right" colspan="2"><label for="check" style="display:inline;font-size:90%;display:inline">自動でログインする</label><input style="max-width:20px;position:&#39;relative&#39;;top:10px;zoom:150%" name="autostart" id="autostart" onchange="localStorage.setItem(&#39;autostart&#39;,this.checked?&#39;true&#39;:&#39;false&#39;)" type="checkbox"></td></tr>
+      </tbody></table>
+      <button class="action" type="button" id="auth_Button">ログイン</button>
+      <br>
+      <br>
+      <div id="message">メールアドレスとパスワードを入力してログインしてください。<br><br>初回ログインやパスワードリセット時は、メールアドレスを入力し、「仮パスワード発行」をクリックしてください</div>
+      <br>
+      <br>
+      
+      <button class="action" type="button" id="email_button">仮パスワードの発行</button>
+
+
+    </form></div>
+  </div></dialog>
+
+  <script>
+    const dialog = document.getElementById('authDialog');
+    const passdialog = document.getElementById('dlg_passwordChange');
+        function showDialog(){
+          document.getElementById('contents').innerHTML
+          =`ログインしてください。`
+          document.getElementById('message').innerHTML='メールアドレスとパスワードを入力してログインしてください。<br><br>初回ログインやパスワードリセット時は、メールアドレスを入力し、「仮パスワード発行」をクリックしてください'
+          document.getElementsByClassName('logoff-btn')[0].innerHTML='ログオフ'
+          document.getElementsByClassName('logoff-btn')[0].style.visibility='hidden'
+          let oldemail=ele_email.value;
+          if(!document.getElementById('check').checked==true) {
+            ele_email.value='';
+            ele_authCode.value='';
+          }
+          validity_check()
+          
+          saveparam = localStorage.setItem('loginsave',document.getElementById('check').checked==true)
+          
+          document.getElementById('autostart').checked=(localStorage.getItem('autostart')=='true');
+         
+         
+         
+          google.script.run.withSuccessHandler(
+            
+          ).logoff(oldemail,'d16702db-587e-441b-a817-240fb92841b4')
+        dialog.showModal();
+        
+        }
+
+        
+        function closeDialog(flag) {
+            if (flag==true) {
+              document.getElementsByClassName('logoff-btn')[0].innerHTML='ログイン'
+            } else {
+              document.getElementsByClassName('logoff-btn')[0].innerHTML='ログオフ'
+            }
+            
+            document.getElementsByClassName('logoff-btn')[0].style.visibility=''            
+            dialog.close();
+        }
+
+        function changePassword(){
+          document.getElementById('btn_passwordChange').disabled=true;
+          google.script.run.withSuccessHandler(ret=>{
+            document.getElementById('txt_passwordChange').value='';
+            document.getElementById('btn_passwordChange').disabled=false;
+            document.getElementById('dlg_passwordChange').close()
+          }).changePasswordGAS(document.getElementById('email').value,document.getElementById('txt_passwordChange').value)
+        }
+  </script>
+
+
+</body></html>
