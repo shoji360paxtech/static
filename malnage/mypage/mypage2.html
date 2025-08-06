@@ -441,10 +441,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 window.addEventListener('load',function(){
 let maluuid=localStorage.getItem('maluuid')||crypto.randomUUID();
-let url = new URL(window.location.href);
+let urlxxx = new URL(window.location.href);
 
 // URLSearchParamsオブジェクトを取得
-let params = url.searchParams;
+let params = urlxxx.searchParams;
 
 // getメソッド
 let paramxxx=((params.get('code')||'')=='')?'':'&code='+params.get('code'); // 5
