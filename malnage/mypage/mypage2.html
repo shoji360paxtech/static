@@ -449,10 +449,10 @@ let params = urlxxx.searchParams;
 // getメソッド
 let paramxxx=((params.get('code')||'')=='')?'':'&code='+params.get('code'); // 5
 paramxxx=((params.get('state')||'')=='')?paramxxx:paramxxx+'&state='+params.get('state'); 
-paramxxx=((params.get('action')||'')=='')?paramxxx:paramxxx+'&action='+params.get('action'); 
+paramxxx=((params.get('action')||'')=='')?paramxxx+'&action=mypage':paramxxx+'&action='+params.get('action'); 
 
 localStorage.setItem('maluuid',maluuid);
-let url='https://script.google.com/macros/s/AKfycbwKRo7liXZB5aEUbffVRH3liyCUkbXcFRYlZ1SQKBgKZaWsR9vZiuZD9oxHLIDKCtAB/exec?action=mypage&maluuid='+maluuid+paramxxx;
+let url='https://script.google.com/macros/s/AKfycbwKRo7liXZB5aEUbffVRH3liyCUkbXcFRYlZ1SQKBgKZaWsR9vZiuZD9oxHLIDKCtAB/exec?maluuid='+maluuid+paramxxx;
 document.getElementById('ifrm0').src=url;
 })
 document.getElementsByClassName('page_title_wrap')[0].style.display='none';
